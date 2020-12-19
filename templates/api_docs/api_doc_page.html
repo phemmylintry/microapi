@@ -1,0 +1,28 @@
+<!-- Get started tab -->
+{% extends 'api_docs/docs_base.html' %}
+
+{% block content  %}
+
+<div id="tabs">
+
+  {% include 'api_docs/api_get_started.html' %}
+
+  <!-- Reference tab -->
+  
+  {% include 'api_docs/api_reference.html' %}
+  
+  <!-- Endpoints tab -->
+  
+  {% include 'api_docs/api_endpoints.html' %}
+  
+  <!-- Tutorials tab -->
+  
+  {% include 'api_docs/api_tutorial.html' %}
+
+  <!-- Hire consultant tab -->
+
+  {% include 'api_docs/hire_consultant.html' %}
+
+</div>
+
+{% endblock %}

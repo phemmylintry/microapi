@@ -1,0 +1,137 @@
+{% extends 'api_docs/auth_api/docs_base.html' %}
+
+
+{% block content %}
+
+{% load static %}
+
+  <div id="api-reference">
+    
+    <div class="d-flex my-5">
+      <section class="side__nav">
+        <div class="input__div">
+          <i class="fa fa-search"></i>
+          <input type="search" name="search" placeholder="Search">
+        </div>
+
+        <p class="mt-3" data-toggle="collapse" data-target="#get_started" aria-expanded="false"
+          aria-controls="collapseExample">
+          Get Started
+        </p>
+        <div class="collapse" id="get_started">
+          <ul>
+            <li><a href="#">How To Use</a></li>
+            <li><a href="#">Terms of service</a></li>
+            <li><a href="#">API Support - Website</a></li>
+            <li><a href="#">Send email to API support</a></li>
+            <li><a href="#">MIT</a></li>
+          </ul>
+        </div>
+
+        <p><a href="#">Microservice Admins</a></p>
+        <p><a href="#">Organizations</a></p>
+        <p><a href="#">Admins</a></p>
+        <p><a href="#">Applications</a></p>
+        <p data-toggle="collapse" data-target="#comments__replies" aria-expanded="false"
+          aria-controls="collapseExample">
+          Comments & Replies
+        </p>
+        <div class="collapse" id="comments__replies">
+          <ul>
+            <li><a href="#">Schema</a></li>
+          </ul>
+        </div>
+        <p><a href="#">Trouble Shooting/Security</a></p>
+        <p><a href="#">Tutorials</a></p>
+      </section>
+
+      <section class="container">
+
+        <section>
+          <div>
+            <h2>API Reference</h2>
+            <p>
+              The Comment API gives the developer access to built-in functionalities for when they want to
+              implement comments and replies within their own application. Basic functionalities are available
+              for creation, update, and deletion of comments and replies while ensuring that only users
+              authorized are allowed to use such functionalities. Additionally, there are extra features such
+              as filtering, sorting, voting, and flagging available.
+              <br><br>
+              You can use the Comment MicroApi in test mode,
+              which does not affect your live data. The API key you use to authenticate
+              the request determines whether the request is in live mode or test mode. The Comment MicroApi differs
+              for every account as we release new versions and tailor functionality. Log in to see docs
+              customized to your version of the API, with your test key and data.<br><br>
+            </p>
+          </div>
+          <div class="signup__steps">
+            <h5>Ready to use the Comment Microapi? <span><a href="#"> Sign up for a free MicroApi account.</a></span>
+            </h5>
+            <ol>
+              <li>1. First, sign up with your email after which a temporary login code will be sent to your inbox. Use
+                this code to complete registration.</li>
+              <li>2. Next, once your setup is complete, you would be redirected to your API dashboard where you can find
+                all our list of APIs and link them to your project.</li>
+            </ol>
+            <h5>
+              Was this section helpful?
+              <span><a href="#">Yes?</a></span>
+              <span><a href="#">No?</a></span>
+            </h5>
+          </div>
+        </section>
+
+        <section class="get__started">
+          <h3>Get Started</h3>
+          <h5>How To Use</h5>
+          <p>Create new Organization to get token. (On creating a new organization, a new admin account is created).</p>
+          <p>All Administration related endpoints requires the <span><a href="#">orgToken</a></span> (i.e
+            organziations,admins. & application endpoints)</p>
+          <p>Create a new Application that Comments and Replies will be tied to.</p>
+          <p>Use <span><a href="#">appToken</a></span> generated when creating application on all Comments and Repies
+            endpoints</p>
+        </section>
+
+        <section>
+          <h3>Video Guide</h3>
+          <p>The Comment API gives the developer access to built-in functionalities for when they want to implement
+            comments and replies within
+            their own application. Basic functionalities are available for creation, update, and deletion of
+            comments and replies while ensuring that only users authorized are allowed to use such functionalities.
+            Additionally, there are extra features such as filtering, sorting, voting, and flagging available.
+          </p>
+          <video width="100%" controls>
+            <source src="" type="video/mp4">
+            <source src="" type="video/ogg">
+            Your browser does not support the video tag.
+          </video>
+        </section>
+
+        <section class="my-4">
+          <h3>Tutorial</h3>
+          <p>
+            The Comment API gives the developer access to built-in functionalities for when they want to implement
+            comments and replies within their own application. Basic functionalities are available for creation,
+            update, and deletion of comments and replies while ensuring that only users authorized are allowed to
+            use such functionalities. Additionally, there are extra features such as filtering, sorting, voting, and
+            flagging available.<br><br>
+
+            The Comment API gives the developer access to built-in functionalities for when they want to implement
+            comments and replies within their own application. Basic functionalities are available for creation,
+            update, and deletion of comments and replies while ensuring that only users authorized are allowed to
+            use such functionalities. Additionally, there are extra features such as filtering, sorting, voting, and
+            flagging available.<br><br>
+
+            The Comment API gives the developer access to built-in functionalities for when they want to implement
+            comments and replies within their own application. Basic functionalities are available for creation,
+            update, and deletion of comments and replies while ensuring that only users authorized are allowed to
+            use such functionalities. Additionally, there are extra features such as filtering, sorting, voting, and
+            flagging available.
+          </p>
+        </section>
+      </section>
+    </div>
+
+  </div>
+  
+{% endblock %}

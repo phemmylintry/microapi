@@ -1,0 +1,161 @@
+{% block content %}
+
+{% load static %}
+
+<div id="reference" class="tab__content col px-0 px-md-3 px-lg-5 invisible">
+  <div class="container-fluid d-flex flex-column flex-md-row">
+    <div class="refNav col-12 col-md-5 col-lg-3">
+      <div class="ref__search__form d-flex align-items-center">
+        <button type="submit" class="col-2 p-0 bg-transparent">
+          <span class="fa fa-search"></span>
+        </button>
+        <input type="search" name="apiRefSearch" placeholder="Search Documentation" class="col-10 p-0 rounded-sm">
+      </div>
+      <div class="refNav__links p-0">
+        <li class="refNav__link font-weight-bolder">
+          <a href="" class="refNav__link__text">Introduction</a>
+        </li>
+        <li class="refNav__link  font-weight-bolder">
+          <span class="more">Get Started &nbsp;
+            <span class="fa fa-angle-double-down"></span>
+          </span>
+        </li>
+        <ul class="pl-3 more__content mb-0">
+          <li>
+            <a href="" class="refNav__link__sub">How to Use</a>
+          </li>
+          <li>
+            <a href="" class="refNav__link__sub">Terms Of Service</a>
+          </li>
+          <li>
+            <a href="" class="refNav__link__sub">API support Serrvice</a>
+          </li>
+          <li>
+            <a href="" class="refNav__link__sub">Send email to API Support</a>
+          </li>
+          <li>
+            <a href="" class="refNav__link__sub">MIT</a>
+          </li>
+        </ul>
+        <li class="refNav__link  font-weight-bolder">
+          <a href="" class="refNav__link__text">MicroService Admins</a>
+        </li>
+        <li class="refNav__link font-weight-bolder">
+          <a href="" class="refNav__link__text">Organisations</a>
+        </li>
+        <li class="refNav__link font-weight-bolder">
+          <a href="" class="refNav__link__text">Admins</a>
+        </li>
+        <li class="refNav__link font-weight-bolder">
+          <a href="" class="refNav__link__text">Applications</a>
+        </li>
+        <li class="refNav__link font-weight-bolder">
+          <a href="" class="refNav__link__text">Comments & Replies</a>
+        </li>
+        <li class="refNav__link font-weight-bolder">
+          <a href="" class="refNav__link__text">Troubleshooting/ Security</a>
+        </li>
+        <li class="refNav__link font-weight-bolder">
+          <a href="" class="refNav__link__text">Tutorials</a>
+        </li>
+      </div>
+    </div>
+    <div class="col-12 col-md-7 col-lg-9 mt-5 mx-auto px-0 pr-md-0">
+      <div class="col pl-md-3 pl-lg-5">
+        <h3 class="pl-md-3 pl-lg-5 mb-3">API Reference</h3>
+        <div class="refIntro pl-md-3 pl-lg-5">
+          <p>
+            {{ info.description }}
+          </p>
+          <p>
+            <b class="font-weight-bolder">
+              Ready to use the {{ info.title }}?
+              <a href="">Sign Up for a free MicroApi account</a>
+            </b>
+          </p>
+
+          <div class="signupSteps p-2 p-md-5 mb-5 rounded">
+            <ul type="A">
+              <li>1. First, sign up with your email after which a temporary login code
+                will be
+                sent to your inbox. Use
+                this code to complete registration.
+              </li>
+              <br>
+              <li>2. Next, once your setup is complete, you would be redirected to your
+                API
+                dashboard where you can find
+                all our list of APIs and link them to your project.
+              </li>
+            </ul>
+          </div>
+          <p>
+            <b class="font-weight-bolder">
+              Was this section helpful?
+              <a href="">Yes</a>
+
+              <a href="">No</a>
+            </b>
+          </p>
+
+        </div>
+        <div class="start mt-5 pl-md-3 pl-lg-5">
+          <h2 class="my-3">Get Started</h2>
+          <h5 class="my-3">How To Use</h5>
+          <div class="col">
+            <p>
+              1. Create new Organization to get token. (On creating a new organization, a
+              new
+              admin
+              account is created).
+            </p>
+            <p>
+              2. All Administration related endpoints requires the
+
+              <a class="bg" href="#">orgToken</a>
+
+              (i.e
+              organziations,admins. & application endpoints)
+            </p>
+            <p>
+              3. Create a new Application that Comments and Replies will be tied to.
+            </p>
+            <p>
+              4. Use
+
+              <a class="bg" href="#">appToken</a>
+
+              generated when creating application on all
+              Comments and Repies
+              endpoints
+            </p>
+          </div>
+        </div>
+        <div class="video mt-5 pl-md-3 pl-lg-5">
+          <h3 class="my-3">Video Guide</h3>
+          <div class="my-2 py-0 py-md-2 px-0">
+            <p>
+              {{ info.description }}
+            </p>
+          </div>
+          <div class="my-3">
+            <video width="100%" controls class="mx-auto">
+              <source src="" type="video/mp4">
+              <source src="" type="video/ogg">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+        <div class="mt-5">
+          <h3 class="mb-3">Tutorial</h3>
+
+          <p>
+            {{ info.description }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

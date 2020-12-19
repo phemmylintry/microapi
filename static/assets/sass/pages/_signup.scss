@@ -1,0 +1,73 @@
+#sign_form{
+    .btn:hover{
+        color: white !important;
+    }
+    .google-btn{
+        margin-bottom: 1.5rem; 
+        button {
+            background: $secondary-color !important;
+            outline: none;
+            color: #212529;
+            border: 1px solid #ced4da;
+            line-height: 20px;
+            padding: .8em !important;
+            font-weight: bold;
+            &:hover{
+                box-shadow: -1px -2px 2px rgba(0, 0, 0, 0.1), 2px 2px 2px rgba(0, 0, 0, 0.1);
+            }
+            img{
+                width: 20px !important;
+                height: 20px !important;
+                margin-right: 5px;
+            }
+            i{
+                font-size: 21px !important;
+                margin-right: 5px;
+                &:hover{
+                    color: initial !important;
+                }
+            }
+        }
+    }
+    .btn-block{
+        padding:0.6em !important;
+        margin-bottom: 10px;
+
+        :hover {
+          color: #fff !important;
+          box-shadow: none !important;
+        }
+    }
+    .form-group{
+        margin-bottom:1.5em !important;
+    }
+    label{
+        margin:0 !important;;
+        font-size:15px!important;
+    }
+    input{
+        background-color: $secondary-color !important;
+        border-radius: 0 !important;
+    }
+    ::placeholder{
+        font-size: 14px !important;
+    }
+    .sign {
+        text-decoration: none;
+        color: $primary-color !important;
+    
+        &:hover {
+          text-decoration: none;
+          color: $primary-color !important;
+        }
+    }
+    #a-link {
+        color: $secondary-color !important;
+    }
+    
+
+}
+
+$primary-color: #1A1B2D;
+$secondary-color: #fff;
+$tetiary-color: #f4f4f4;

@@ -1,0 +1,179 @@
+#documentation{
+
+
+  h1,h2,h3,h4,h5,h6{
+    
+    overflow: hidden;
+    // color: #121215;
+  }
+  a{
+    color: inherit;
+    &:hover{
+      text-decoration: none;
+    }
+  }
+  main{
+    text-align: justify;
+  }
+
+
+  .comment__microapi{
+    display: flex;
+    margin-top: 2rem;
+
+    .comment__details{
+      display: flex;
+      margin: auto;
+      margin-right: 0;
+      text-align: center;
+      .comment__user{
+        margin: 0 1rem;
+      }
+      .comment__ratings{
+        margin: 0 1rem;
+        div{
+          display: flex;
+        }
+      }
+    }
+  }
+
+  .side__nav{
+    padding: 20px 1rem 20px 3rem;
+    width: 30%;
+    .input__div{
+      display: flex;
+      border: 0.5px solid #E5E5E5;
+      border-radius: 8px;
+      padding: 7px 10px;
+      i{
+        color: gray;
+        margin: auto 5px;
+      }
+      input{
+        border: 0;
+        outline: 0;
+        width: 95%;
+      }
+    }
+    p{
+      line-height: 2;
+      cursor: pointer;
+      
+      font-size: 18px;
+      a{
+        
+      }
+    }
+
+    ul{
+      padding-left: 1rem;
+      li{
+        line-height: 2;
+      }
+    }
+  }
+  
+  .docs__topnav{
+    display: flex;
+    border-top: 0.4px solid #E5E5E5;
+    border-bottom: 0.4px solid #E5E5E5;
+    margin: 2rem 0;
+    section{
+      display: flex;      
+    }
+    ul{
+      display: flex;
+      margin: 0;
+      padding: 0;
+      li{
+        line-height: 3.5;
+        padding: 0 10px;
+      }
+
+    }
+    .hire__consultant{
+      margin: auto;
+      margin-right: 0;
+      color: inherit;
+    }
+    .active__state{
+      border-bottom: 3px solid black;
+    }
+  }
+
+  .signup__steps{
+    margin: 2rem 0;
+    span,a{
+      color: #58bf8e;
+      text-decoration: none;;
+    }
+    ol {
+      background: rgba(110, 139, 65, 0.09);
+      border-radius: 10px;
+      padding: 2rem;
+      margin: 2rem 0;
+      li{
+        // overflow-x: visible;
+        margin: 1.5rem 1rem;
+        line-height: 1.5;
+      }
+    }
+  }
+  
+  .get__started{
+    margin: 2rem 0;
+    line-height: 2;
+    span{
+      background: #EEEEEE;
+      border-radius: 5px;
+      padding: 0.5rem;
+    }
+    a{
+      color: inherit;
+    }
+    h5{
+      line-height: 2;
+    }
+    p{
+      overflow-x: visible;
+    }
+  }
+  @media (max-width: $breakpoint-tablet) {
+    .side__nav{
+      display: none;
+    }
+  }
+  @media (max-width: $breakpoint-phone) {
+    h2{
+      font-size: 1.8rem;
+    }
+  
+    .comment__microapi{
+      display: block;
+
+      .comment__details{
+        margin: 1.5rem auto;
+        .comment__user,.comment__ratings{
+          margin: auto;
+        }
+      }
+    }
+    
+    .docs__topnav{
+      ul{
+        flex-wrap: wrap;
+        li{
+          line-height: 3;
+        }
+      .active__state{
+        border-bottom: 2px solid black;
+      }
+    }
+    .hire__consultant{
+      display: none;
+    }
+  }
+}
+
+}

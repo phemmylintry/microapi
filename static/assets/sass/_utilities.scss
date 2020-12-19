@@ -1,0 +1,54 @@
+
+@mixin btn {
+  border: none;
+  padding: 0.5rem 2rem;
+  border: 1px solid transparent;
+}
+
+.primary-btn {
+  @include btn;
+  background-color: $primary-color;
+  color: $secondary-color;
+  
+  &:hover {
+    border-color: $theme-color;
+    box-shadow: 0 0 3px 1px lighten($color: $primary-color, $amount: 20);
+  }
+
+  a {
+    color: $secondary-color;
+    text-decoration: none;
+  }
+}
+
+.secondary-btn {
+  @include btn;
+  background-color: $secondary-color; 
+  color: $primary-color;
+
+  &:hover {
+    border-color: $primary-color;
+    box-shadow: inset 0 0 2px 0px lighten($color: $theme-color, $amount: 20);
+  }
+
+  a {
+    color: $primary-color;
+    text-decoration: none;
+  }
+}
+
+.tetiary-btn {
+  @include btn;
+  background-color: $tetiary-color;
+  color: $primary-color;
+  
+  &:hover {
+    border-color: $theme-color;
+    box-shadow: 0 0 3px 1px lighten($color: $primary-color, $amount: 20);
+  }
+
+  a {
+    color: $primary-color;
+    text-decoration: none;
+  }
+}

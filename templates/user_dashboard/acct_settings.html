@@ -1,0 +1,278 @@
+{% extends 'user_dashboard/dash_base.html' %}
+
+{% block content %}
+{% load static %}
+
+<div id="settings">
+
+  <div class="main__title">
+    <h1>Account Settings</h1>
+    <p>Set your preference, help us personalize your experience and make account changes here</p>
+  </div>
+
+  <div class="sections">
+    {% if messages %}
+    {% for message in messages %}
+    <div class="text-warning">
+      {{ message}}
+    </div>
+    {% endfor %}
+    {% endif %}
+    
+    <div id="profile" class="switcher">
+
+      <div class="main__content__heading">
+        <div></div>
+  
+        <div>
+          <h4>Profile</h4>
+        </div>
+      </div>
+  
+      <div class="main__content">
+        <div class="main__content__menu">
+          <ul>
+            <li class="active" onclick="showProfile('#profile')"><b>Profile</b></li>
+            <li onclick="showProfile('#password')"><b>Password</b></li>
+            <li onclick="showProfile('#projects')"><b>Projects</b></li>
+          </ul>
+        </div>
+  
+        <section class="main__content__tabs">
+          
+          <article id="profile-tab">
+            <div class="profile__details">
+              <div class="profile__image">
+                <!-- <i class="far fa-user"></i> -->
+                <img src="{% static 'img/kadet pic.jpeg' %}" alt="">
+              </div>
+    
+              <div class="btn-container">
+                <button class="primary-btn custom-btn" data-toggle="modal" data-target="#imageModal">Upload New Image</button>
+                
+                <!-- Modal -->
+                <div class="modal fade" id="imageModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">New Profile Picture</h5>
+                      </div>
+                      <div class="modal-body">
+                        
+                        <form method="post">
+                         
+                            <label>
+                              <input type="file" class="form-control-file" name="" id="" placeholder="" aria-describedby="fileHelpId">
+                            </label>
+
+                        </form>
+
+                      </div>
+
+                      <div class="modal-foot">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn green-btn">Save changes</button>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+                <!-- Modal -->
+    
+                <p>Remove</p>
+              </div>
+            </div>
+  
+            <div class="edit__profile__form">
+              <form action="." method="POST">
+                {% csrf_token %}
+  
+                <label>
+                  <b>Username</b>
+                  <input type="text" placeholder="{{user.username}}" name="username">
+                </label>
+  
+                <label>
+                  <b>Email</b>
+                  <input type="text" placeholder="{{user.email}}" name="email">
+                </label>
+  
+                <button class="primary-btn custom-btn">Save Changes</button>
+  
+              </form>
+            </div>
+          </article>
+          
+        </section>
+      </div>
+  
+    </div>
+  
+    <div id="password" class="switcher disappear">
+      <div class="main__content__heading">
+        <div></div>
+  
+        <div>
+          <h4>Password</h4>
+        </div>
+      </div>
+  
+      <div class="main__content">
+        <div class="main__content__menu">
+          <ul>
+            <li onclick="showProfile('#profile')"><b>Profile</b></li>
+            <li class="active" onclick="showProfile('#password')"><b>Password</b></li>
+            <li onclick="showProfile('#projects')"><b>Projects</b></li>
+          </ul>
+        </div>
+  
+        <section class="main__content__tabs">
+          
+          <article id="profile-tab">
+            <div class="edit__profile__form">
+              <form action="{% url 'dashboard:change_pass'%}" method="POST">
+                {% csrf_token %}
+  
+                <label>
+                  <b>Old password</b>
+                  <input type="password" name="old_password">
+                </label>
+  
+                <label>
+                  <b>New password</b>
+                  <input type="password" name="password1">
+                </label>
+
+                <label>
+                  <b>New password</b>
+                  <input type="password" name="password2">
+                </label>
+  
+                <input type="submit" class="primary-btn custom-btn" value="Save Changes">
+  
+              </form>
+            </div>
+          </article>
+          
+        </section>
+      </div>
+    </div>
+
+    <div id="projects" class="switcher disappear">
+      <div class="main__content__heading">
+        <div></div>
+  
+        <div>
+          <h4>Projects</h4>
+        </div>
+      </div>
+  
+      <div class="main__content">
+        <div class="main__content__menu">
+          <ul>
+            <li onclick="showProfile('#profile')"><b>Profile</b></li>
+            <li onclick="showProfile('#password')"><b>Password</b></li>
+            <li class="active" onclick="showProfile('#projects')"><b>Projects</b></li>
+          </ul>
+        </div>
+  
+        <section class="main__content__tabs">
+          
+          <article id="profile-tab" class="projects-tab">
+            <div class="project__list">
+
+              <table class="table table-striped">
+                {% if projects %}
+                <thead>
+                  <tr>
+                    <th scope="col">Project Name</th>
+                    <!-- <th scope="col">Date Created</th> -->
+                    <th scope="col"></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {% for project in projects %}
+                  <tr>
+                    <td>{{ project.name }}</td>
+                    <!-- <td>17th May 2020</td> -->
+                    <td><a href="#"><button class="primary-btn table-btn">Edit</button></a></td>
+                    <td><a href="{% url 'dashboard:delete_project' id=project.id %}"><button class="danger-btn table-btn">Delete</button></a></td>
+                  </tr>
+                  {% endfor %}
+                </tbody>
+                {% else %}
+                  <p>You do not have a project setup yet. Click <a href="">here</a> to add one.</p>
+                {% endif %}
+              </table>
+
+              <!-- Modal -->
+              <div class="modal fade" id="projectModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLongTitle">Edit Project</h5>
+                    </div>
+                    <div class="modal-body">
+                      
+                      <label>
+                        <b>Name</b>
+                        <input type="text">
+                      </label>
+
+                      <label>
+                        <b>Description</b>
+                        <textarea cols="30" rows="3"></textarea>
+                      </label>
+
+                      <table class="table table-striped">
+                        <thead class=".thead-dark">
+                          <tr>
+                            <th scope="col">APIs</th>
+                            <th scope="col"></th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>Email API</td>
+                            <td><a href="#"><button class="primary-btn table-btn" data-toggle="modal" data-target="#projectModal">Configure</button></a></td>
+                          </tr>
+                          <tr>
+                            <td>Auth API</td>
+                            <td><a href="#"><button class="primary-btn table-btn">Configure</button></a></td>
+                          </tr>
+                          <tr>
+                            <td>Transaction API</td>
+                            <td><a href="#"><button class="primary-btn table-btn">Configure</button></a></td>
+                          </tr>
+                        </tbody>
+                      </table>
+
+
+                    </div>
+
+                    <div class="modal-foot">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      <button type="button" class="btn green-btn">Save changes</button>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+              <!-- Modal -->
+
+            </div>
+          </article>
+          
+        </section>
+      </div>
+    </div>
+
+
+  </div>
+
+  
+
+</div>
+
+<script src="{% static 'js/acct-settings.js' %}"></script>
+{% endblock %}

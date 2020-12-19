@@ -1,0 +1,220 @@
+#auth{
+    .nav__menu li{
+        list-style: none;
+    }
+    #tabs .invisible {
+        display: none !important;
+    }
+    .setup_comment{
+        
+        padding: 70px 0px 30px 0px;
+        display: grid;
+        &__navbar{
+            width: 1120px;
+            margin: auto;
+            padding-right: 20px;
+            &__section1{
+                float: left;
+                padding-bottom: 20px;
+                &__img{
+                    width: 50px;
+                    height: 50px;
+                    float: left;
+                    img{
+                        height: 100%;
+                        width: 100%;
+                    }
+                }
+                &__title{
+                    float: right;
+                    margin-left: 20px;
+                    p{
+                        color: #5E5E66;
+                        font-size: 16px;
+                    }
+                    h1{
+                        font-size: 36px;
+                        color: #121215;
+                    }
+                }
+            }
+            &__section2{
+                float: right;
+                &__user{
+                    float: left;
+                    margin-right: 20px;
+                    text-align: center;
+                    P{
+                        margin-bottom: 0px;
+                        color: #5E5E66;
+                        font-size: 16px;
+                    }
+                }
+                &__rating{
+                    float: right;
+                    padding-left: 20px;
+                    text-align: center;
+                    border-left: 1px solid #ddd;
+                    P{
+                        margin-bottom: 0px;
+                        color: #5E5E66;
+                        font-size: 16px;
+                    }
+                    h4 i{
+                        margin-right: 3px;
+                    }
+                }
+            }
+            
+        }
+        &__navlink{
+            border-bottom: 1px solid #ddd;
+            border-top: 1px solid #ddd;
+            padding: 20px 0px;
+            &__container{
+                width: 1120px;
+                padding-right: 20px;
+                margin: auto;
+                &__1{
+                    float: left;
+                    a{
+                        margin-right: 13px;
+                        cursor: pointer;
+                        padding:20px 0px;
+                        color: #5E5E66;
+                        font-size: 16px;
+                        &:hover{
+                            border-bottom: 4px solid #000000;
+                        }
+                    }
+                    .active{
+                        border-bottom: 4px solid #000000;
+                    }
+                }
+                &__2{
+                    float: right;
+                    a{
+                        color: #121215;
+                        font-size: 16px;
+                        cursor: pointer;
+                        &:hover{
+                            color: $theme-color;
+                        }
+                    }
+                    .active{
+                        color: $theme-color;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 1199px) {
+    #auth{
+        .setup_comment{
+            &__navbar{
+                padding-left: 15px;
+                width: 960px;
+            }
+            &__navlink{
+                &__container{
+                    padding-left: 15px;
+                    width: 960px;
+                }
+            }
+        }
+    }
+}
+@media(max-width: 992px){
+    #auth{
+        .setup_comment{
+            &__navbar{
+                padding-left: 15px;
+                width: 720px;
+            }
+            &__navlink{
+                &__container{
+                    padding-left: 15px;
+                    width: 720px;
+                }
+            }
+        }
+    }
+}
+@media(max-width: 768px){
+    #auth{
+        .setup_comment{
+            &__navbar{
+                width: 100%;
+                padding-right: 0px;
+                display: grid;
+                padding-bottom: 20px;
+                &__section1{
+                    width: 390px;
+                    float: none;
+                    margin: auto;
+                }
+                &__section2{
+                    width: 155px;
+                    float: none;
+                    margin: auto;
+                }
+            }
+            &__navlink{
+                padding: 0px;
+                &__container{
+                   padding-right: 0px;
+                   margin: 0px;
+                   width: 100%;
+                   &__1{
+                     float: none;
+                     padding: 20px 0px;
+                     text-align: center;
+                     a{
+                        padding: 15px 20px;
+                        background: #ddd;
+                        margin: 10px;
+                        display: inline-block;
+                        &:hover{
+                            background: #000;
+                            color: $secondary-color;
+                            border: none;
+                        }
+                     }
+                     .active{
+                        background: #000;
+                        color: $secondary-color;
+                        border: none;
+                     }
+                   }
+                   &__2{
+                    float: none;
+                    text-align: center;
+                    padding: 20px 0;
+                    border-top: 1px solid #ddd;
+                   }
+                }
+            }
+        }
+    }
+}
+@media (max-width:650px){
+    #auth{
+        .setup_comment{
+            &__navbar{
+                &__section1{
+                    width: 282px;
+                &__img{
+                    width: 40px;
+                    height: 40px;
+                }
+                &__title{
+                        h1{
+                            font-size: 25px;
+                        }
+                    }
+                }
+            }   
+        }
+    }
+}

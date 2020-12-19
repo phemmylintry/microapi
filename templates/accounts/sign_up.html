@@ -1,0 +1,89 @@
+{% extends 'homepage/base.html'%} {% block content %} {% load static %}
+{% load socialaccount %}
+<body id="layout">
+  <!-- Main body goes here -->
+  <br />
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3 col-lg-4"></div>
+      <div class="col-md-6 col-sm-12 col-lg-4 col-xs-4">
+        <h1 class="text-center"><strong>Sign Up</strong></h1>
+        <br />
+
+        <form action="{% url 'accounts:signup' %}" method="POST" id="sign_form">
+          {% csrf_token %}
+          <div class="text-primary">
+            {% for message in messages %} {{ message }} {% endfor %}
+          </div>
+          <div class="google-btn">
+            <button>
+              <a href="{% provider_login_url 'google' %}" class="primary-btn btn-block">
+                <img src="{% static 'img/google_logo.png' %}" /> Continue with Google
+              </a>
+            </button>
+          </div>
+          <div class="google-btn mb-5">
+            <button type="submit" name="githubSubmit" value="OK" class="primary-btn btn-block">
+              <i class="fab fa-github"></i> Continue with Github
+            </button>
+          </div>
+
+          <div class="form-group">
+            <label for="email">FIRST NAME</label>
+            <input
+              type="text"
+              name="firstname"
+              class="form-control"
+              placeholder="Enter your first name..."
+            />
+          </div>
+          <div class="form-group">
+            <label for="email">LAST NAME</label>
+            <input
+              type="text"
+              name="lastname"
+              class="form-control"
+              placeholder="Enter your Last name..."
+            />
+          </div>
+          <div class="form-group">
+            <label for="email">USERNAME</label>
+            <input
+              type="text"
+              name="username"
+              class="form-control"
+              placeholder="Enter your Username.."
+
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="pwd">EMAIL</label>
+            <input
+              type="text"
+              name="email"
+              class="form-control"
+              placeholder="Enter your email address..."
+            />
+          </div>
+        
+          <div class="form-group">
+            <label for="pwd">PASSWORD</label>
+            <input type="password" name="pwd" class="form-control" />
+          </div>
+
+          <div class="form-group">
+            <label for="pwd">CONFIRM PASSWORD</label>
+            <input type="password" name="confirmpwd" class="form-control" />
+          </div>
+     
+          <button type="submit" class="btn btn-block primary-btn">
+            Sign up
+          </button>
+        </form>
+        <br /><br />
+      </div>
+    </div>
+  </div>
+</body>
+{% endblock %}

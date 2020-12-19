@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="Description" content="Enter your description here" />
+  {% load static %}
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+  <link rel="stylesheet" href="{% static 'css/style.min.css' %}">
+
+  <title>Micro Api - {{ info.title }}</title>
+</head>
+
+<body id="auth">
+
+  <!-- Header start here -->
+
+  <header>
+    <!-- Write header here -->
+    <div class="container">
+      <div class="row pt-4 pb-4 header__wrapper">
+        <div class="col-lg-2 col-md-6 col-sm-6 logo__container">
+          <a href="{% url 'index' %}" class="logo"><img src="{% static 'img/logo.svg' %}" alt="site logo"></a>
+        </div>
+
+        <nav class="col-lg-6">
+          <ul class="nav__menu">
+            <li><a class="nav_link" href="{% url 'index' %}">Home</a></li>
+            <li><a class="nav_link" href="{% url 'about' %}">About us</a></li>
+            <li><a class="nav_link" href="{% url 'contact' %}">Contact us</a></li>
+            <li><a class="nav_link" href="#">Documentation</a></li>
+          </ul>
+        </nav>
+
+        <div class="col-lg-4 menu__button__container">
+          <a href="{% url 'accounts:signin' %}"><button class="secondary-btn">Sign In</button></a>
+          <a href="{% url 'accounts:signup' %}"><button class="secondary-btn">Sign Up</button></a>
+        </div>
+
+        <div class="mobile__nav">
+          <div class="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+
+          <div class="mobile__menu">
+            <nav class="nav">
+              <div class="search__form">
+                <label for="search">
+                  <input type="text" name="search" placeholder="Search...">
+                </label>
+                <div class="search__icon">
+                  <i class="fas fa-search"></i>
+                </div>
+              </div>
+
+              <ul class="mobile__nav__menu">
+                <li><a href="{% url 'index' %}"><b>Home</b></a></li>
+                <li><a href="{% url 'about' %}"><b>About us</b></a></li>
+                <li><a href="{% url 'contact' %}"><b>Contact us</b></a></li>
+                <li><a href="#"><b>Documentation</b></a></li>
+                <li><a href="{% url 'accounts:signin' %}"><b>Sign in</b></a></li>
+                <li><a href="{% url 'accounts:signup' %}"><b>Sign Up</b></a></li>
+                <li>
+
+                  <a href="#"><i class="fab fa-facebook-f"></i></a>
+                  <a href="#"><i class="fab fa-instagram"></i></a>
+                  <a href="#"><i class="fab fa-twitter"></i></a>
+                </li>
+              </ul>
+
+              <div class="menu__logo">
+                <a href="#"><img src="{% static 'img/logo.svg' %}" alt=""></a>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- docs nav -->
+  <div class="setup_comment">
+
+    <div class="setup_comment__navbar">
+      <div class="setup_comment__navbar__section1">
+        <div class="setup_comment__navbar__section1__img">
+          <img src="https://image.flaticon.com/icons/svg/18/18598.svg" alt="images" />
+        </div>
+        <div class="setup_comment__navbar__section1__title">
+          <h1 class="word h1">{{ info.title }}</h1>
+          <p class="word p"> Updated on {{ time }}</p>
+        </div>
+      </div>
+      <div class="setup_comment__navbar__section2">
+        <div class="setup_comment__navbar__section2__user">
+          <p>Users</p>
+          <h4>1234</h4>
+        </div>
+        <div class="setup_comment__navbar__section2__rating">
+          <p>Ratings</p>
+          <h4><i class="fa fa-star" aria-hidden="true"></i><span>4.9</span></h4>
+        </div>
+      </div>
+    </div>
+
+    <div class="setup_comment__navlink">
+      <div class="setup_comment__navlink__container">
+        <div class="setup_comment__navlink__container__1">
+          <a class="tab__menu__link s-links active">Introduction</a>
+          <a class="tab__menu__link s-links">API reference</a>
+          <a class="tab__menu__link s-links">Endpoints</a>
+          <a class="tab__menu__link s-links">Tutorial</a>
+        </div>
+        <div class="setup_comment__navlink__container__2"><a class="tab__menu__link s-links">Hire a Consultant</a></div>
+      </div>
+    </div>
+  </div>
+  <!-- Header ends here -->
+
+  {% block content %}
+
+  {% endblock %}
+
+  <!-- Normal Page Goes Here -->
+
+  <!-- Normal Page ends Here -->
+
+
+
+  <!-- Footer start here -->
+  <footer>
+
+    <div class="container pt-5 pb-5 footer__wrapper">
+      <div class="footer__logo__container">
+        <div class="footer__logo">
+          <a href="#"><img src="{% static 'img/logo.svg' %}" alt="footer logo"></a>
+        </div>
+      </div>
+
+      <div class="footer__menus__container">
+        <div>
+          <h6>Product</h6>
+          <ul>
+            <li><a href="#">Authentication API</a></li>
+            <li><a href="#">Models</a></li>
+            <li><a href="{% url 'faq' %}">FAQ</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h6>Collaboration</h6>
+          <ul>
+            <li><a href="#">Comments</a></li>
+            <li><a href="#">Track Changes</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h6>Explore</h6>
+          <ul>
+            <li><a href="{% url 'contact' %}">Contact Us</a></li>
+            <li><a href="{% url 'about' %}">About Us</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <script src="{% static 'js/nav.js' %}"></script>
+  <script src="{% static 'js/doc.js' %}"></script>
+  <script src="{% static 'js/doc-tabs.js' %}"></script>
+
+
+</body>
+
+</html>
+<!--<li class="tab__menu__link s-links active"><a href="#">Introduction</a></li>-->

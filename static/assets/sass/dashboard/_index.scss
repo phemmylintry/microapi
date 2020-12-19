@@ -1,0 +1,48 @@
+@import 'layout';
+@import 'components';
+
+#dashboard {
+  .dashboard__main {
+    height: 88.2vh;
+    padding: 2% 5% 15% !important;
+    overflow-y: auto;
+
+    .dashboard__title {
+      margin-bottom: 1rem;
+    }
+
+    .dashboard__subtitle {
+      margin-bottom: 1rem;
+
+      h3 {
+        font-family: 'gilroyregular';
+      }
+    }
+
+    .dashboard__content {
+      display: flex;
+      flex-direction: column;
+      padding: .5rem 0;
+
+      .dashboard__row {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        flex-wrap: wrap;
+        background-color: $tetiary-color;
+        padding: 1.2rem;
+      }
+    }
+  }
+
+  // @media (max-width: $breakpoint-phone) {
+  //   .dashboard__main {
+  //     height: 80.2vh;
+  //   }
+  // }
+}
+
+
+
+
+

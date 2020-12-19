@@ -1,0 +1,1047 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="Enter your description here" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.min.css">
+    <title>Micro API - Individual Docs</title>
+</head>
+
+<body id="docs">
+
+    <!-- Header start here -->
+
+    <header>
+        <div class="container">
+            <div class="row pt-4 pb-4 header__wrapper">
+                <div class="col-lg-2 col-md-6 col-sm-6 logo__container">
+                    <a href="index.html" class="logo"><img src="./assets/img/logo.svg" alt="site logo"></a>
+                </div>
+
+                <nav class="col-lg-6">
+                    <ul class="nav__menu">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About us</a></li>
+                        <li><a href="contact.html">Contact us</a></li>
+                        <li><a href="docs.html">Documentation</a></li>
+                    </ul>
+                </nav>
+
+                <div class="col-lg-4 menu__button__container">
+                    <a href="signin1.html"><button class="secondary-btn">Sign In</button></a>
+                    <a href="signup-1.html"><button class="primary-btn">Sign Up</button></a>
+                </div>
+
+                <div class="mobile__nav">
+                    <div class="hamburger">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+
+                    <div class="mobile__menu">
+                        <nav class="nav">
+                            <div class="search__form">
+                                <label for="search">
+                                    <input type="text" name="search" placeholder="Search...">
+                                </label>
+                                <div class="search__icon">
+                                    <i class="fas fa-search"></i>
+                                </div>
+                            </div>
+
+                            <ul class="mobile__nav__menu">
+                                <li><a href="index.html"><b>Home</b></a></li>
+                                <li><a href="about.html"><b>About us</b></a></li>
+                                <li><a href="contact.html"><b>Contact us</b></a></li>
+                                <li><a href="docs.html"><b>Documentation</b></a></li>
+                                <li><a href="signin1.html"><b>Sign in</b></a></li>
+                                <li><a href="signup-1.html"><b>Sign Up</b></a></li>
+                                <li>
+                                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="#"><i class="fab fa-instagram"></i></a>
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                </li>
+                            </ul>
+
+                            <div class="menu__logo">
+                                <a href="#"><img src="./assets/img/logo.svg" alt=""></a>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main body starts here -->
+    <div class="doc container-fluid p-0">
+        <div class="container-fluid px-0">
+            <div class="doc__header col d-flex flex-column flex-md-row justify-content-between align-items-center">
+                <div class="doc__title d-flex flex-row align-items-center">
+                    <span class="fa fa-comment-alt fa-2x mr-3"></span>
+                    <div class="doc__name d-flex flex-column">
+                        <h3>Comment MicroAPI</h3>
+                        <p>Updated 10 June 2020</p>
+                    </div>
+                </div>
+                <div class="doc__analytics d-flex flex-row">
+                    <div class="doc__users d-flex flex-column">
+                        <span>Users</span>
+                        <span>234</span>
+                    </div>
+                    <div class="doc__rating d-flex flex-column">
+                        <span>Rating</span>
+                        <span>4.7</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div
+            class="help container-fluid d-flex flex-column-reverse flex-md-row justify-content-between align-items-center px-1 px-md-5">
+            <div class="tabs d-flex flex-row align-items-center">
+                <div class="tab active mx-1" onclick="currentTab(1)">
+                    <p>
+                        Introduction
+                    </p>
+                </div>
+                <div class="tab mx-1" onclick="currentTab(2)">
+                    <p>
+                        API Reference
+                        <!-- <a href="./documentation.html" style="color: #212529;"> API Reference</a> -->
+                    </p>
+                </div>
+                <div class="tab mx-1" onclick="currentTab(3)">
+                    <p>Endpoints</p>
+                </div>
+                <!-- <div class="tab mx-1" onclick="currentTab(4)">
+                    <p>Tutorial</p>
+                </div> -->
+            </div>
+            <div class="hire">
+                <a href="">Hire a consultant</a>
+            </div>
+        </div>
+        <div class="tab__content__container my-5">
+
+            <!-- Documentation Intro starts here -->
+
+            <div id="intro" class="tab__content">
+                <div class="container col-12 col-md-9 mx-auto">
+                    <div class="container col-12 col-md-10 col-lg-6 mx-auto">
+                        <h2 class="text-center">Get Started With <br> Comment MicroAPI</h2>
+                        <p class="text-center">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Adipiscing stas purus pharetra mi
+                            mattis
+                            vel. Donec lectus a dignissim tincidunt at consequat sapien ultricies risus.
+                        </p>
+                    </div>
+                    <div
+                        class="attributes container mx-auto my-5 py-2 py-md-5 px-0 d-flex flex-column flex-md-row justify-content-between">
+                        <div
+                            class="attribute col-8 col-md-4 col-lg-3 mx-auto my-3 d-flex flex-column align-items-center justify-content-center">
+                            <img src="assets/img/nocode.svg" alt="" class="w-50 w-md-75">
+                            <p class="mb-0 mt-4 font-weight-bolder">No Code</p>
+                        </div>
+                        <div class="attribute col-8 col-md-4 col-lg-3 mx-auto my-3 d-flex flex-column
+                            align-items-center justify-content-center">
+                            <img src="assets/img/easy-implementation.svg" alt="" class="w-50 w-md-75">
+                            <p class="mb-0 mt-4 font-weight-bolder">Easy Integration</p>
+                        </div>
+                        <div class="attribute col-8 col-md-4 col-lg-3 mx-auto my-3 d-flex flex-column align-items-center
+                            justify-content-center">
+                            <img src="assets/img/fast.svg" alt="" class="w-50 w-md-75">
+                            <p class="mb-0 mt-4 font-weight-bolder">Fast implementation</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="integration py-5 py-md-5">
+                    <div class="col-12 col-md-6 col-lg-4 mx-auto my-3 text-center">
+                        <p>SEAMLESS INTEGRATION WITH YOUR FAVORITE FRAMEWORKS</p>
+                    </div>
+                    <div class="int container d-flex flex-column flex-md-row flex-wrap justify-content-around">
+                        <div class="col-8 col-md-4 col-lg-2 my-3 my-md-3 flex-grow-1 mx-auto text-center">
+                            <img src="assets/img/next.svg" alt="" class="">
+                        </div>
+                        <div class="col-8 col-md-4 col-lg-2 my-3 my-md-3 flex-grow-1 mx-auto text-center">
+                            <img src="assets/img/react 1.svg" alt="">
+                        </div>
+                        <div class="col-8 col-md-4 col-lg-2 my-3 my-md-3 flex-grow-1 mx-auto text-center">
+                            <img src="assets/img/ember.svg" alt="">
+                        </div>
+                        <div class="col-8 col-md-4 col-lg-2 my-3 my-md-3 flex-grow-1 mx-auto text-center">
+                            <img src="assets/img/vue.svg" alt="">
+                        </div>
+                        <div class="col-8 col-md-4 col-lg-2 my-3 my-md-3 flex-grow-1 mx-auto text-center">
+                            <img src="assets/img/angular.svg" alt="">
+                        </div>
+                        <div class="col-8 col-md-4 col-lg-2 my-3 my-md-3 flex-grow-1 mx-auto text-center">
+                            <img src="assets/img/gatsby.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div id="features" class="container pt-3 pt-md-5">
+                    <div class="col-12 col-md-8 col-lg-6 mx-auto text-center">
+                        <h3>Features</h3>
+                        <p class="">See features that let you speed up and manage your user’s authentication seamlessly
+                        </p>
+                    </div>
+                    <div
+                        class="features__container my-3 my-md-5 d-flex flex-column flex-md-row flex-wrap align-items-center justify-content-between">
+                        <div class="feature col-12 col-md-5 d-flex flex-column align-items-start border-danger-2">
+                            <div class="mb-3">
+                                <h3>SIGN IN/ SIGN UP</h3>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adip. Nisi, sit egestas purus pharetra mi
+                                    mattis
+                                    vel. Donec lectus a dignissim tincidunt at consequat sapien ultricies risus.
+                                </p>
+                            </div>
+                            <a href="" class="py-2 px-4">Learn More</a>
+                        </div>
+                        <div class="feature  col-12 col-md-5 d-flex flex-column align-items-start border-danger-2">
+                            <div class="mb-3">
+                                <h3>SIGN IN/ SIGN UP</h3>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adip. Nisi, sit egestas purus pharetra mi
+                                    mattis
+                                    vel. Donec lectus a dignissim tincidunt at consequat sapien ultricies risus.
+                                </p>
+                            </div>
+                            <a href="" class="py-2 px-4">Learn More</a>
+                        </div>
+                        <div class="feature  col-12 col-md-5 d-flex flex-column align-items-start border-danger-2">
+                            <div class="mb-3">
+                                <h3>SIGN IN/ SIGN UP</h3>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adip. Nisi, sit egestas purus pharetra mi
+                                    mattis
+                                    vel. Donec lectus a dignissim tincidunt at consequat sapien ultricies risus.
+                                </p>
+                            </div>
+                            <a href="" class="py-2 px-4">Learn More</a>
+                        </div>
+                        <div class="feature  col-12 col-md-5 d-flex flex-column align-items-start border-danger-2">
+                            <div class="mb-3">
+                                <h3>SIGN IN/ SIGN UP</h3>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adip. Nisi, sit egestas purus pharetra mi
+                                    mattis
+                                    vel. Donec lectus a dignissim tincidunt at consequat sapien ultricies risus.
+                                </p>
+                            </div>
+                            <a href="" class="py-2 px-4">Learn More</a>
+                        </div>
+                    </div>
+                    <div id="trial" class="container px-0">
+                        <div class="col-10 col-md-6 col-lg-4 mx-auto my-3 text-center">
+                            <h3>Ready to try it out?</h3>
+                            <p>
+                                Get 500 free request on our Authentication API for a year with unlimited support
+                            </p>
+                        </div>
+                        <div class="subform col-12 col-md-8 col-lg-6 px-0 px-md-3 d-flex mx-auto">
+                            <input type="email" name="email" placeholder="Enter your Email">
+                            <button type=" submit" class="btn-dark text-white px-3">Sign Up</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Documentation Reference starts here-->
+
+            <div id="reference" class="tab__content col px-0 px-md-3 px-lg-5" style="display: none;">
+                <div class="container-fluid d-flex flex-column flex-md-row">
+                    <div class="refNav col-12 col-md-5 col-lg-3">
+                        <div class="ref__search__form d-flex align-items-center">
+                            <button type="submit" class="col-2 p-0 bg-transparent">
+                                <span class="fa fa-search"></span>
+                            </button>
+                            <input type="search" name="apiRefSearch" placeholder="Search Documentation"
+                                class="col-10 p-0 rounded-sm">
+                        </div>
+                        <div class="refNav__links p-0">
+                            <li class="refNav__link font-weight-bolder">
+                                <a href="" class="refNav__link__text">Introduction</a>
+                            </li>
+                            <li class="refNav__link  font-weight-bolder">
+                                <span class="more">Get Started &nbsp;
+                                    <span class="fa fa-angle-double-down"></span>
+                                </span>
+                            </li>
+                            <ul class="pl-3 more__content mb-0">
+                                <li>
+                                    <a href="" class="refNav__link__sub">How to Use</a>
+                                </li>
+                                <li>
+                                    <a href="" class="refNav__link__sub">Terms Of Service</a>
+                                </li>
+                                <li>
+                                    <a href="" class="refNav__link__sub">API support Serrvice</a>
+                                </li>
+                                <li>
+                                    <a href="" class="refNav__link__sub">Send email to API Support</a>
+                                </li>
+                                <li>
+                                    <a href="" class="refNav__link__sub">MIT</a>
+                                </li>
+                            </ul>
+                            <li class="refNav__link  font-weight-bolder">
+                                <a href="" class="refNav__link__text">MicroService Admins</a>
+                            </li>
+                            <li class="refNav__link font-weight-bolder">
+                                <a href="" class="refNav__link__text">Organisations</a>
+                            </li>
+                            <li class="refNav__link font-weight-bolder">
+                                <a href="" class="refNav__link__text">Admins</a>
+                            </li>
+                            <li class="refNav__link font-weight-bolder">
+                                <a href="" class="refNav__link__text">Applications</a>
+                            </li>
+                            <li class="refNav__link font-weight-bolder">
+                                <a href="" class="refNav__link__text">Comments & Replies</a>
+                            </li>
+                            <li class="refNav__link font-weight-bolder">
+                                <a href="" class="refNav__link__text">Troubleshooting/ Security</a>
+                            </li>
+                            <li class="refNav__link font-weight-bolder">
+                                <a href="" class="refNav__link__text">Tutorials</a>
+                            </li>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-7 col-lg-9 mt-5 mx-auto px-0 pr-md-0">
+                        <div class="col pl-md-3 pl-lg-5">
+                            <h3 class="pl-md-3 pl-lg-5 mb-3">API Reference</h3>
+                            <div class="refIntro pl-md-3 pl-lg-5">
+                                <p>The Comment API gives the developer access to built-in functionalities for when
+                                    they
+                                    want to
+                                    implement comments and replies within their own application. Basic
+                                    functionalities
+                                    are available
+                                    for creation, update, and deletion of comments and replies while ensuring that
+                                    only
+                                    users
+                                    authorized are allowed to use such functionalities. Additionally, there are
+                                    extra
+                                    features such
+                                    as filtering, sorting, voting, and flagging available.
+                                </p>
+                                <p>
+                                    You can use the Comment MicroApi in test mode,
+                                    which does not affect your live data. The API key you use to authenticate
+                                    the request determines whether the request is in live mode or test mode. The
+                                    Comment
+                                    MicroApi differs
+                                    for every account as we release new versions and tailor functionality. Log in to
+                                    see
+                                    docs
+                                    customized to your version of the API, with your test key and data.
+                                </p>
+                                <p>
+                                    <b class="font-weight-bolder">
+                                        Ready to use the Comment MicroApi?
+                                        <a href="">Sign Up for a free MicroApi account</a>
+                                    </b>
+                                </p>
+
+                                <div class="signupSteps p-2 p-md-5 mb-5 rounded">
+                                    <ul type="A">
+                                        <li>1. First, sign up with your email after which a temporary login code
+                                            will be
+                                            sent to your inbox. Use
+                                            this code to complete registration.
+                                        </li>
+                                        <br>
+                                        <li>2. Next, once your setup is complete, you would be redirected to your
+                                            API
+                                            dashboard where you can find
+                                            all our list of APIs and link them to your project.
+                                        </li>
+                                    </ul>
+                                </div>
+                                <p>
+                                    <b class="font-weight-bolder">
+                                        Was this section helpful?
+                                        <a href="">Yes</a>
+
+                                        <a href="">No</a>
+                                    </b>
+                                </p>
+
+                            </div>
+                            <div class="start mt-5 pl-md-3 pl-lg-5">
+                                <h2 class="my-3">Get Started</h2>
+                                <h5 class="my-3">How To Use</h5>
+                                <div class="col">
+                                    <p>
+                                        1. Create new Organization to get token. (On creating a new organization, a
+                                        new
+                                        admin
+                                        account is created).
+                                    </p>
+                                    <p>
+                                        2. All Administration related endpoints requires the
+
+                                        <a class="bg" href="#">orgToken</a>
+
+                                        (i.e
+                                        organziations,admins. & application endpoints)
+                                    </p>
+                                    <p>
+                                        3. Create a new Application that Comments and Replies will be tied to.
+                                    </p>
+                                    <p>
+                                        4. Use
+
+                                        <a class="bg" href="#">appToken</a>
+
+                                        generated when creating application on all
+                                        Comments and Repies
+                                        endpoints
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="video mt-5 pl-md-3 pl-lg-5">
+                                <h3 class="my-3">Video Guide</h3>
+                                <div class="my-2 py-0 py-md-2 px-0">
+                                    <p>
+                                        The Comment API gives the developer access to built-in functionalities for
+                                        when
+                                        they
+                                        want
+                                        to implement
+                                        comments and replies within
+                                        their own application. Basic functionalities are available for creation,
+                                        update,
+                                        and
+                                        deletion of
+                                        comments and replies while ensuring that only users authorized are allowed
+                                        to
+                                        use
+                                        such
+                                        functionalities.
+                                        Additionally, there are extra features such as filtering, sorting, voting,
+                                        and
+                                        flagging
+                                        available.
+                                    </p>
+                                </div>
+                                <div class="my-3">
+                                    <video width="100%" controls class="mx-auto">
+                                        <source src="" type="video/mp4">
+                                        <source src="" type="video/ogg">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </div>
+                            </div>
+                            <div class="mt-5">
+                                <h3 class="mb-3">Tutorial</h3>
+
+                                <p>
+                                    The Comment API gives the developer access to built-in functionalities for when
+                                    they
+                                    want to implement
+                                    comments and replies within their own application. Basic functionalities are
+                                    available
+                                    for creation,
+                                    update, and deletion of comments and replies while ensuring that only users
+                                    authorized
+                                    are allowed to
+                                    use such functionalities. Additionally, there are extra features such as
+                                    filtering,
+                                    sorting, voting, and
+                                    flagging available.
+                                </p>
+                                <p>
+                                    The Comment API gives the developer access to built-in functionalities for when
+                                    they
+                                    want to implement
+                                    comments and replies within their own application. Basic functionalities are
+                                    available
+                                    for creation,
+                                    update, and deletion of comments and replies while ensuring that only users
+                                    authorized
+                                    are allowed to
+                                    use such functionalities. Additionally, there are extra features such as
+                                    filtering,
+                                    sorting, voting, and
+                                    flagging available.
+                                </p>
+                                <p>
+                                    The Comment API gives the developer access to built-in functionalities for when
+                                    they
+                                    want to implement
+                                    comments and replies within their own application. Basic functionalities are
+                                    available
+                                    for creation,
+                                    update, and deletion of comments and replies while ensuring that only users
+                                    authorized
+                                    are allowed to
+                                    use such functionalities. Additionally, there are extra features such as
+                                    filtering,
+                                    sorting, voting, and
+                                    flagging available.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Documentation Enpoints start here -->
+
+            <div id="endpoint" class="tab__content" style="display: none;">
+                <div class="container-fluid d-flex flex-column flex-md-row">
+                    <div class="quicknav col-12 col-md-5 col-lg-3 px-0">
+                        <div class="shortcut__search__form d-flex align-items-center">
+                            <button type="submit" class="col-2 p-0">
+                                <span class="fa fa-search"></span>
+                            </button>
+                            <input type="search" name="endpoint-search" placeholder="Search Endpoints..."
+                                class="col-10 p-0">
+                        </div>
+                        <div class="shortcuts p-0">
+                            <div class="shortcut">
+                                <h5 class="shortcut__heading">Sign In</h5>
+                                <a href="" class="shortcut__link col d-flex align-items-center">
+                                    <div class="shortcut__link__btn--post mr-1">
+                                        POST
+                                    </div>
+                                    <div class="shortcut__link__text">Sign In with Email</div>
+                                </a>
+                                <a href="" class="shortcut__link col d-flex">
+                                    <span class="shortcut__link__btn--post mr-1">
+                                        POST
+                                    </span>
+                                    <span class="shortcut__link__text">Sign In with Google</span>
+                                </a>
+                                <a href="" class="shortcut__link col d-flex">
+                                    <span class="shortcut__link__btn--post mr-1">
+                                        POST
+                                    </span>
+                                    <span class="shortcut__link__text">Sign In with Facebook</span>
+                                </a>
+                            </div>
+                            <div class="shortcut">
+                                <h5 class="shortcut__heading">Reset Password</h5>
+                                <a href="" class="shortcut__link d-flex">
+                                    <span class="shortcut__link__btn--post mr-1">
+                                        POST
+                                    </span>
+                                    <span class="shortcut__link__text">Confirm Email</span>
+                                </a>
+                                <a href="" class="shortcut__link d-flex">
+                                    <span class="shortcut__link__btn--post mr-1">
+                                        POST
+                                    </span>
+                                    <span class="shortcut__link__text">Change Password</span>
+                                </a>
+                                <a href="" class="shortcut__link d-flex">
+                                    <span class="shortcut__link__btn--put mr-1">
+                                        PUT
+                                    </span>
+                                    <span class="shortcut__link__text">Reset Password</span>
+                                </a>
+                            </div>
+                            <div class="shortcut">
+                                <h5 class="shortcut__heading">Make Payment</h5>
+                                <a href="" class="shortcut__link d-flex">
+                                    <span class="shortcut__link__btn--post mr-1">
+                                        POST
+                                    </span>
+                                    <span class="shortcut__link__text">Confirm Email</span>
+                                </a>
+                                <a href="" class="shortcut__link d-flex">
+                                    <span class="shortcut__link__btn--post mr-1">
+                                        POST
+                                    </span>
+                                    <span class="shortcut__link__text">Change Password</span>
+                                </a>
+                                <a href="" class="shortcut__link d-flex">
+                                    <span class="shortcut__link__btn--put mr-1">
+                                        PUT
+                                    </span>
+                                    <span class="shortcut__link__text">Reset Password</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="endpoints col-12 col-md-7 col-lg-9 mt-5 mx-auto px-0 pr-md-0 d-flex flex-column">
+                        <div class="d-flex flex-column flex-lg-row my-5">
+                            <div class="endpoint__desc col-12 col-lg-8 pl-md-3 px-lg-3 px-0 pl-lg-0">
+                                <div class="endpoint col-12 col-lg-11 pr-md-0 px-0 mx-auto">
+                                    <h2 class="endpoint__heading">Sign In</h2>
+                                    <!-- <h4 class="endpoint__subheading">Sign In With Email</h4> -->
+                                    <p class="endpoint__desc">
+                                        Use Multiple providers to enhance your sign in anf sign up flow
+                                    </p>
+                                    <div class="endpoint__test">
+                                        <div class="test__heading col d-flex justify-content-between">
+                                            <div class="d-flex">
+                                                <h4>URL</h4>
+                                                <p class="test__action__btn--post ml-3">POST</p>
+                                            </div>
+                                            <div class="github">
+                                                <a href="" class="github__link">
+                                                    Github Repo &nbsp;&nbsp;&nbsp;&#8594;
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="endpoint__test__textarea">
+                                            <textarea readonly
+                                                id="">https://microapi.dev/authenticationapi/signin?=true-user/this-could-be-multiline</textarea>
+                                            <div class="endpoint__test__copy">
+                                                <a onclick="copyText(this)">
+                                                    <span class="fa fa-copy"></span>
+                                                    Copy
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="param">
+                                        <h4 class="param__heading">Path Parameters</h4>
+                                        <div class="param__type">
+                                            <div class="param__type__heading">
+                                                <span>userData<span class="asterisk">*</span> </span>
+                                                <span class="param__type__data">Map&lt;String,dynamic&gt;</span>
+                                            </div>
+                                            <div class="param__type__desc mt-2">
+                                                <p>
+                                                    This is a map of user data It contains sign up information
+                                                    needed
+                                                    from
+                                                    the user before auth
+                                                </p>
+                                            </div>
+                                            <div class="param__type__sample">
+                                                <div class="d-flex justify-content-between">
+                                                    <span>username</span>
+                                                    <span>string</span>
+                                                </div>
+                                                <div class="d-flex justify-content-between">
+                                                    <span>username</span>
+                                                    <span>string</span>
+                                                </div>
+                                                <div class="d-flex justify-content-between">
+                                                    <span>username</span>
+                                                    <span>string</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="param__type">
+                                            <div class="param__type__heading">
+                                                <span>authToken<span class="asterisk">*</span> </span>
+                                                <span class="param__type__data ml-3">String</span>
+                                            </div>
+                                            <div class="param__type__desc mt-2">
+                                                <p>
+                                                    This is a map of user data It contains sign up information
+                                                    needed
+                                                    from
+                                                    the user before auth
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="param__type">
+                                            <div class="param__type__heading">
+                                                <span>expireTime<span class="asterisk">*</span> </span>
+                                                <span class="param__type__data ml-3">String</span>
+                                            </div>
+                                            <div class="param__type__desc mt-2">
+                                                <p>
+                                                    This is a map of user data It contains sign up information
+                                                    needed
+                                                    from
+                                                    the user before auth
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="endpoint__sample col-12 col-lg-4 ml-md-3 ml-lg-0 pl-lg-0 d-flex flex-column">
+                                <div class="">
+                                    <div class="endpoint__sample__req">
+                                        <p class="heading">Sample Request</p>
+                                        <div class="req">
+                                            <select name="req-platform" class="req-platform px-3">
+                                                <option value="node">NodeJS</option>
+                                                <option value="php">PHP</option>
+                                                <option value="python">Python</option>
+                                            </select>
+                                            <code class="req__code">
+                                                node request goes here
+                                            </code>
+                                        </div>
+                                    </div>
+                                    <div class="endpoint__sample__res mt-3">
+                                        <p class="heading">Sample Response</p>
+                                        <div class="res">
+                                            <div class="res__type d-flex">
+                                                <div class=" res__tab active_tab px-3" onclick="showOk(this)">200
+                                                </div>
+                                                <div class="res__tab px-3" onclick="showBad(this)">400 Bad Request
+                                                </div>
+                                            </div>
+                                            <div class="res__body">
+                                                <code class="resp">
+                                                    {
+                                                    "userData" : {
+                                                    "username" : "Dikamsi Design"
+                                                    }
+                                                    }
+                                                </code>
+                                                <code class="resp" style="display: none;">
+                                                    {
+                                                    "userData1" : {
+                                                    "username" : "Dikamsi Design"
+                                                    }
+                                                    }
+                                                </code>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" d-flex flex-column flex-lg-row my-5">
+                            <div class="endpoint__desc col-12 col-lg-8 pl-md-3 px-lg-3 px-0 pl-lg-0">
+                                <div class="endpoint col-12 col-lg-11 pr-md-0 px-0 mx-auto">
+                                    <h2 class="endpoint__heading">Reset Password</h2>
+                                    <!-- <h4 class="endpoint__subheading">Sign In With Email</h4> -->
+                                    <p class="endpoint__desc">
+                                        Use Multiple providers to enhance your sign in anf sign up flow
+                                    </p>
+                                    <div class="endpoint__test">
+                                        <div class="test__heading col d-flex justify-content-between">
+                                            <div class="d-flex">
+                                                <h4>URL</h4>
+                                                <p class="test__action__btn--post ml-3">POST</p>
+                                            </div>
+                                            <div class="github">
+                                                <a href="" class="github__link">
+                                                    Github Repo &nbsp;&nbsp;&nbsp;&#8594;
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="endpoint__test__textarea">
+                                            <textarea readonly
+                                                id="">https://microapi.dev/authenticationapi/signin?=true-user/this-could-be-multiline</textarea>
+                                            <div class="endpoint__test__copy">
+                                                <a onclick="copyText(this)">
+                                                    <span class="fa fa-copy"></span>
+                                                    Copy
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="param">
+                                        <h4 class="param__heading">Path Parameters</h4>
+                                        <div class="param__type">
+                                            <div class="param__type__heading">
+                                                <span>userData<span class="asterisk">*</span> </span>
+                                                <span class="param__type__data">Map&lt;String,dynamic&gt;</span>
+                                            </div>
+                                            <div class="param__type__desc mt-2">
+                                                <p>
+                                                    This is a map of user data It contains sign up information
+                                                    needed
+                                                    from
+                                                    the user before auth
+                                                </p>
+                                            </div>
+                                            <div class="param__type__sample">
+                                                <div class="d-flex justify-content-between">
+                                                    <span>username</span>
+                                                    <span>string</span>
+                                                </div>
+                                                <div class="d-flex justify-content-between">
+                                                    <span>username</span>
+                                                    <span>string</span>
+                                                </div>
+                                                <div class="d-flex justify-content-between">
+                                                    <span>username</span>
+                                                    <span>string</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="param__type">
+                                            <div class="param__type__heading">
+                                                <span>authToken<span class="asterisk">*</span> </span>
+                                                <span class="param__type__data ml-3">String</span>
+                                            </div>
+                                            <div class="param__type__desc mt-2">
+                                                <p>
+                                                    This is a map of user data It contains sign up information
+                                                    needed
+                                                    from
+                                                    the user before auth
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="param__type">
+                                            <div class="param__type__heading">
+                                                <span>expireTime<span class="asterisk">*</span> </span>
+                                                <span class="param__type__data ml-3">String</span>
+                                            </div>
+                                            <div class="param__type__desc mt-2">
+                                                <p>
+                                                    This is a map of user data It contains sign up information
+                                                    needed
+                                                    from
+                                                    the user before auth
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="endpoint__sample col-12 col-lg-4 ml-md-3 ml-lg-0 pl-lg-0 d-flex flex-column">
+                                <div class="">
+                                    <div class="endpoint__sample__req">
+                                        <p class="heading">Sample Request</p>
+                                        <div class="req">
+                                            <select name="req-platform" class="req-platform px-3">
+                                                <option value="node">NodeJS</option>
+                                                <option value="php">PHP</option>
+                                                <option value="python">Python</option>
+                                            </select>
+                                            <code class="req__code">
+                                                node request goes here
+                                            </code>
+                                        </div>
+                                    </div>
+                                    <div class="endpoint__sample__res mt-3">
+                                        <p class="heading">Sample Response</p>
+                                        <div class="res">
+                                            <div class="res__type d-flex">
+                                                <div class=" res__tab active_tab px-3" onclick="showOk(this)">200
+                                                </div>
+                                                <div class="res__tab px-3" onclick="showBad(this)">400 Bad Request
+                                                </div>
+                                            </div>
+                                            <div class="res__body">
+                                                <code class="resp">
+                                                    {
+                                                    "userData" : {
+                                                    "username" : "Dikamsi Design"
+                                                    }
+                                                    }
+                                                </code>
+                                                <code class="resp" style="display: none;">
+                                                    {
+                                                    "userData1" : {
+                                                    "username" : "Dikamsi Design"
+                                                    }
+                                                    }
+                                                </code>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-column flex-lg-row my-5">
+                            <div class="endpoint__desc col-12 col-lg-8 pl-md-3 px-lg-3 px-0 pl-lg-0">
+                                <div class="endpoint col-12 col-lg-11 pr-md-0 px-0 mx-auto">
+                                    <h2 class="endpoint__heading">Make Payment</h2>
+                                    <!-- <h4 class="endpoint__subheading">Sign In With Email</h4> -->
+                                    <p class="endpoint__desc">
+                                        Use Multiple providers to enhance your sign in anf sign up flow
+                                    </p>
+                                    <div class="endpoint__test">
+                                        <div class="test__heading col d-flex justify-content-between">
+                                            <div class="d-flex">
+                                                <h4>URL</h4>
+                                                <p class="test__action__btn--post ml-3">POST</p>
+                                            </div>
+                                            <div class="github">
+                                                <a href="" class="github__link">
+                                                    Github Repo &nbsp;&nbsp;&nbsp;&#8594;
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="endpoint__test__textarea">
+                                            <textarea readonly
+                                                id="">https://microapi.dev/authenticationapi/signin?=true-user/this-could-be-multiline</textarea>
+                                            <div class="endpoint__test__copy">
+                                                <a onclick="copyText(this)">
+                                                    <span class="fa fa-copy"></span>
+                                                    Copy
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="param">
+                                        <h4 class="param__heading">Path Parameters</h4>
+                                        <div class="param__type">
+                                            <div class="param__type__heading">
+                                                <span>userData<span class="asterisk">*</span> </span>
+                                                <span class="param__type__data">Map&lt;String,dynamic&gt;</span>
+                                            </div>
+                                            <div class="param__type__desc mt-2">
+                                                <p>
+                                                    This is a map of user data It contains sign up information
+                                                    needed
+                                                    from
+                                                    the user before auth
+                                                </p>
+                                            </div>
+                                            <div class="param__type__sample">
+                                                <div class="d-flex justify-content-between">
+                                                    <span>username</span>
+                                                    <span>string</span>
+                                                </div>
+                                                <div class="d-flex justify-content-between">
+                                                    <span>username</span>
+                                                    <span>string</span>
+                                                </div>
+                                                <div class="d-flex justify-content-between">
+                                                    <span>username</span>
+                                                    <span>string</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="param__type">
+                                            <div class="param__type__heading">
+                                                <span>authToken<span class="asterisk">*</span> </span>
+                                                <span class="param__type__data ml-3">String</span>
+                                            </div>
+                                            <div class="param__type__desc mt-2">
+                                                <p>
+                                                    This is a map of user data It contains sign up information
+                                                    needed
+                                                    from
+                                                    the user before auth
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="param__type">
+                                            <div class="param__type__heading">
+                                                <span>expireTime<span class="asterisk">*</span> </span>
+                                                <span class="param__type__data ml-3">String</span>
+                                            </div>
+                                            <div class="param__type__desc mt-2">
+                                                <p>
+                                                    This is a map of user data It contains sign up information
+                                                    needed
+                                                    from
+                                                    the user before auth
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="endpoint__sample col-12 col-lg-4 ml-md-3 ml-lg-0 pl-lg-0 d-flex flex-column">
+                                <div class="">
+                                    <div class="endpoint__sample__req">
+                                        <p class="heading">Sample Request</p>
+                                        <div class="req">
+                                            <select name="req-platform" class="req-platform px-3">
+                                                <option value="node">NodeJS</option>
+                                                <option value="php">PHP</option>
+                                                <option value="python">Python</option>
+                                            </select>
+                                            <code class="req__code">
+                                                node request goes here
+                                            </code>
+                                        </div>
+                                    </div>
+                                    <div class="endpoint__sample__res mt-3">
+                                        <p class="heading">Sample Response</p>
+                                        <div class="res">
+                                            <div class="res__type d-flex">
+                                                <div class=" res__tab active_tab px-3" onclick="showOk(this)">200
+                                                </div>
+                                                <div class="res__tab px-3" onclick="showBad(this)">400 Bad Request
+                                                </div>
+                                            </div>
+                                            <div class="res__body">
+                                                <code class="resp">
+                                                    {
+                                                    "userData" : {
+                                                    "username" : "Dikamsi Design"
+                                                    }
+                                                    }
+                                                </code>
+                                                <code class="resp" style="display: none;">
+                                                    {
+                                                    "userData1" : {
+                                                    "username" : "Dikamsi Design"
+                                                    }
+                                                    }
+                                                </code>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tutorial starts here -->
+
+            <div id="tutorial" class="tab__content" style="display: none;">
+                <p>tutorial</p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <!-- Write footer here -->
+
+        <div class="container pt-5 pb-5 footer__wrapper">
+            <div class="footer__logo__container">
+                <div class="footer__logo">
+                    <a href="#"><img src="./assets/img/logo.svg" alt="footer logo"></a>
+                </div>
+            </div>
+
+            <div class="footer__menus__container">
+                <div>
+                    <h6>Product</h6>
+                    <ul>
+                        <li><a href="auth.html">Authentication API</a></li>
+                        <li><a href="#">Models</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h6>Collaboration</h6>
+                    <ul>
+                        <li><a href="#">Comments</a></li>
+                        <li><a href="#">Track Changes</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h6>Explore</h6>
+                    <ul>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="assets/js/nav.js"></script>
+    <script src="assets/js/doc.js"></script>
+</body>
+
+</html>

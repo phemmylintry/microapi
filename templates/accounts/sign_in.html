@@ -1,0 +1,35 @@
+{% extends 'homepage/base.html'%} {% block content %} {% load static %}
+<body id="layout">
+  <!-- Main body goes here -->
+<div class="container">
+  	<div class="row my-4">
+	  	<div class="col-md-4"></div>
+	  	<div class="col-md-4 col-sm-12 col-lg-4 col-xs-4">	
+		  <h1 class="text-center"><strong>Sign In</strong></h1>
+		  <br>
+			<form action="{% url 'accounts:signin' %}" method="POST" id="sign_form">
+				{% csrf_token %}
+				<div class="text-warning"> {% for message in messages %}
+					{{ message }}
+				  {% endfor %}</div>
+				<div class="google-btn">
+					<button type="submit" name="googleSubmit" value="OK" class="primary-btn btn-block"><img src="{% static 'img/google_logo.png' %}"/> Continue with Google</button>
+				</div>
+			  <div class="form-group">
+			    <label for="pwd">EMAIL</label>
+			    <input type="text" name="email" class="form-control input" placeholder="Enter your email adress...">
+			  </div>
+			  <div class="form-group">
+			    <label for="pwd">PASSWORD</label>
+			    <input type="password" name="password" class="form-control input"  value="">
+			  </div>
+			  <button type="submit" class="btn-block primary-btn">Sign in</button>
+        <small><a href="{% url 'recover_password' %}" class="text-center">Forgot Password?</a></small> <br>
+        <small>Already haver an account? <a href="{% url 'accounts:signup' %}" class="text-center">Sign Up</a></small>
+			</form><br><br>
+	    </div>
+	</div>
+</div>
+  
+</body>
+{% endblock %}

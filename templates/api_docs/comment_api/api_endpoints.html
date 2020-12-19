@@ -1,0 +1,504 @@
+
+{% extends 'api_docs/comment_api/docs_base.html' %}
+
+
+{% block content %}
+
+{% load static %}
+
+<div id="endpoint" class="tab__content">
+  <div class="container-fluid d-flex flex-column flex-md-row">
+    <div class="quicknav col-12 col-md-5 col-lg-3 px-0">
+      <div class="shortcut__search__form d-flex align-items-center">
+        <button type="submit" class="col-2 p-0">
+          <span class="fa fa-search"></span>
+        </button>
+        <input type="search" name="endpoint-search" placeholder="Search Endpoints..." class="col-10 p-0">
+      </div>
+      <div class="shortcuts p-0">
+        <div class="shortcut">
+          <h5 class="shortcut__heading">Sign In</h5>
+          <a href="" class="shortcut__link col d-flex align-items-center">
+            <div class="shortcut__link__btn--post mr-1">
+              POST
+            </div>
+            <div class="shortcut__link__text">Sign In with Email</div>
+          </a>
+          <a href="" class="shortcut__link col d-flex">
+            <span class="shortcut__link__btn--post mr-1">
+              POST
+            </span>
+            <span class="shortcut__link__text">Sign In with Google</span>
+          </a>
+          <a href="" class="shortcut__link col d-flex">
+            <span class="shortcut__link__btn--post mr-1">
+              POST
+            </span>
+            <span class="shortcut__link__text">Sign In with Facebook</span>
+          </a>
+        </div>
+        <div class="shortcut">
+          <h5 class="shortcut__heading">Reset Password</h5>
+          <a href="" class="shortcut__link d-flex">
+            <span class="shortcut__link__btn--post mr-1">
+              POST
+            </span>
+            <span class="shortcut__link__text">Confirm Email</span>
+          </a>
+          <a href="" class="shortcut__link d-flex">
+            <span class="shortcut__link__btn--post mr-1">
+              POST
+            </span>
+            <span class="shortcut__link__text">Change Password</span>
+          </a>
+          <a href="" class="shortcut__link d-flex">
+            <span class="shortcut__link__btn--put mr-1">
+              PUT
+            </span>
+            <span class="shortcut__link__text">Reset Password</span>
+          </a>
+        </div>
+        <div class="shortcut">
+          <h5 class="shortcut__heading">Make Payment</h5>
+          <a href="" class="shortcut__link d-flex">
+            <span class="shortcut__link__btn--post mr-1">
+              POST
+            </span>
+            <span class="shortcut__link__text">Confirm Email</span>
+          </a>
+          <a href="" class="shortcut__link d-flex">
+            <span class="shortcut__link__btn--post mr-1">
+              POST
+            </span>
+            <span class="shortcut__link__text">Change Password</span>
+          </a>
+          <a href="" class="shortcut__link d-flex">
+            <span class="shortcut__link__btn--put mr-1">
+              PUT
+            </span>
+            <span class="shortcut__link__text">Reset Password</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="endpoints col-12 col-md-7 col-lg-9 mt-5 mx-auto px-0 pr-md-0 d-flex flex-column">
+      <div class="d-flex flex-column flex-lg-row my-5">
+        <div class="endpoint__desc col-12 col-lg-8 pl-md-3 px-lg-3 px-0 pl-lg-0">
+          <div class="endpoint col-12 col-lg-11 pr-md-0 px-0 mx-auto">
+            <h2 class="endpoint__heading">Sign In</h2>
+            <!-- <h4 class="endpoint__subheading">Sign In With Email</h4> -->
+            <p class="endpoint__desc">
+              Use Multiple providers to enhance your sign in anf sign up flow
+            </p>
+            <div class="endpoint__test">
+              <div class="test__heading col d-flex justify-content-between">
+                <div class="d-flex">
+                  <h4>URL</h4>
+                  <p class="test__action__btn--post ml-3">POST</p>
+                </div>
+                <div class="github">
+                  <a href="" class="github__link">
+                    Github Repo &nbsp;&nbsp;&nbsp;&#8594;
+                  </a>
+                </div>
+              </div>
+              <div class="endpoint__test__textarea">
+                <textarea readonly
+                  id="">https://microapi.dev/authenticationapi/signin?=true-user/this-could-be-multiline</textarea>
+                <div class="endpoint__test__copy">
+                  <a onclick="copyText(this)">
+                    <span class="fa fa-copy"></span>
+                    Copy
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="param">
+              <h4 class="param__heading">Path Parameters</h4>
+              <div class="param__type">
+                <div class="param__type__heading">
+                  <span>userData<span class="asterisk">*</span> </span>
+                  <span class="param__type__data">Map&lt;String,dynamic&gt;</span>
+                </div>
+                <div class="param__type__desc mt-2">
+                  <p>
+                    This is a map of user data It contains sign up information
+                    needed
+                    from
+                    the user before auth
+                  </p>
+                </div>
+                <div class="param__type__sample">
+                  <div class="d-flex justify-content-between">
+                    <span>username</span>
+                    <span>string</span>
+                  </div>
+                  <div class="d-flex justify-content-between">
+                    <span>username</span>
+                    <span>string</span>
+                  </div>
+                  <div class="d-flex justify-content-between">
+                    <span>username</span>
+                    <span>string</span>
+                  </div>
+                </div>
+              </div>
+              <div class="param__type">
+                <div class="param__type__heading">
+                  <span>authToken<span class="asterisk">*</span> </span>
+                  <span class="param__type__data ml-3">String</span>
+                </div>
+                <div class="param__type__desc mt-2">
+                  <p>
+                    This is a map of user data It contains sign up information
+                    needed
+                    from
+                    the user before auth
+                  </p>
+                </div>
+              </div>
+              <div class="param__type">
+                <div class="param__type__heading">
+                  <span>expireTime<span class="asterisk">*</span> </span>
+                  <span class="param__type__data ml-3">String</span>
+                </div>
+                <div class="param__type__desc mt-2">
+                  <p>
+                    This is a map of user data It contains sign up information
+                    needed
+                    from
+                    the user before auth
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="endpoint__sample col-12 col-lg-4 ml-md-3 ml-lg-0 pl-lg-0 d-flex flex-column">
+          <div class="">
+            <div class="endpoint__sample__req">
+              <p class="heading">Sample Request</p>
+              <div class="req">
+                <select name="req-platform" class="req-platform px-3">
+                  <option value="node">NodeJS</option>
+                  <option value="php">PHP</option>
+                  <option value="python">Python</option>
+                </select>
+                <code class="req__code">
+                  node request goes here
+                </code>
+              </div>
+            </div>
+            <div class="endpoint__sample__res mt-3">
+              <p class="heading">Sample Response</p>
+              <div class="res">
+                <div class="res__type d-flex">
+                  <div class=" res__tab active_tab px-3" onclick="showOk(this)">200
+                  </div>
+                  <div class="res__tab px-3" onclick="showBad(this)">400 Bad Request
+                  </div>
+                </div>
+                <div class="res__body">
+                  <code class="resp">
+                    {
+                    "userData" : {
+                    "username" : "Dikamsi Design"
+                    }
+                    }
+                  </code>
+                  <code class="resp" style="display: none;">
+                    {
+                    "userData1" : {
+                    "username" : "Dikamsi Design"
+                    }
+                    }
+                  </code>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class=" d-flex flex-column flex-lg-row my-5">
+        <div class="endpoint__desc col-12 col-lg-8 pl-md-3 px-lg-3 px-0 pl-lg-0">
+          <div class="endpoint col-12 col-lg-11 pr-md-0 px-0 mx-auto">
+            <h2 class="endpoint__heading">Reset Password</h2>
+            <!-- <h4 class="endpoint__subheading">Sign In With Email</h4> -->
+            <p class="endpoint__desc">
+              Use Multiple providers to enhance your sign in anf sign up flow
+            </p>
+            <div class="endpoint__test">
+              <div class="test__heading col d-flex justify-content-between">
+                <div class="d-flex">
+                  <h4>URL</h4>
+                  <p class="test__action__btn--post ml-3">POST</p>
+                </div>
+                <div class="github">
+                  <a href="" class="github__link">
+                    Github Repo &nbsp;&nbsp;&nbsp;&#8594;
+                  </a>
+                </div>
+              </div>
+              <div class="endpoint__test__textarea">
+                <textarea readonly
+                  id="">https://microapi.dev/authenticationapi/signin?=true-user/this-could-be-multiline</textarea>
+                <div class="endpoint__test__copy">
+                  <a onclick="copyText(this)">
+                    <span class="fa fa-copy"></span>
+                    Copy
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="param">
+              <h4 class="param__heading">Path Parameters</h4>
+              <div class="param__type">
+                <div class="param__type__heading">
+                  <span>userData<span class="asterisk">*</span> </span>
+                  <span class="param__type__data">Map&lt;String,dynamic&gt;</span>
+                </div>
+                <div class="param__type__desc mt-2">
+                  <p>
+                    This is a map of user data It contains sign up information
+                    needed
+                    from
+                    the user before auth
+                  </p>
+                </div>
+                <div class="param__type__sample">
+                  <div class="d-flex justify-content-between">
+                    <span>username</span>
+                    <span>string</span>
+                  </div>
+                  <div class="d-flex justify-content-between">
+                    <span>username</span>
+                    <span>string</span>
+                  </div>
+                  <div class="d-flex justify-content-between">
+                    <span>username</span>
+                    <span>string</span>
+                  </div>
+                </div>
+              </div>
+              <div class="param__type">
+                <div class="param__type__heading">
+                  <span>authToken<span class="asterisk">*</span> </span>
+                  <span class="param__type__data ml-3">String</span>
+                </div>
+                <div class="param__type__desc mt-2">
+                  <p>
+                    This is a map of user data It contains sign up information
+                    needed
+                    from
+                    the user before auth
+                  </p>
+                </div>
+              </div>
+              <div class="param__type">
+                <div class="param__type__heading">
+                  <span>expireTime<span class="asterisk">*</span> </span>
+                  <span class="param__type__data ml-3">String</span>
+                </div>
+                <div class="param__type__desc mt-2">
+                  <p>
+                    This is a map of user data It contains sign up information
+                    needed
+                    from
+                    the user before auth
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="endpoint__sample col-12 col-lg-4 ml-md-3 ml-lg-0 pl-lg-0 d-flex flex-column">
+          <div class="">
+            <div class="endpoint__sample__req">
+              <p class="heading">Sample Request</p>
+              <div class="req">
+                <select name="req-platform" class="req-platform px-3">
+                  <option value="node">NodeJS</option>
+                  <option value="php">PHP</option>
+                  <option value="python">Python</option>
+                </select>
+                <code class="req__code">
+                  node request goes here
+                </code>
+              </div>
+            </div>
+            <div class="endpoint__sample__res mt-3">
+              <p class="heading">Sample Response</p>
+              <div class="res">
+                <div class="res__type d-flex">
+                  <div class=" res__tab active_tab px-3" onclick="showOk(this)">200
+                  </div>
+                  <div class="res__tab px-3" onclick="showBad(this)">400 Bad Request
+                  </div>
+                </div>
+                <div class="res__body">
+                  <code class="resp">
+                    {
+                    "userData" : {
+                    "username" : "Dikamsi Design"
+                    }
+                    }
+                  </code>
+                  <code class="resp" style="display: none;">
+                    {
+                    "userData1" : {
+                    "username" : "Dikamsi Design"
+                    }
+                    }
+                  </code>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="d-flex flex-column flex-lg-row my-5">
+        <div class="endpoint__desc col-12 col-lg-8 pl-md-3 px-lg-3 px-0 pl-lg-0">
+          <div class="endpoint col-12 col-lg-11 pr-md-0 px-0 mx-auto">
+            <h2 class="endpoint__heading">Make Payment</h2>
+            <!-- <h4 class="endpoint__subheading">Sign In With Email</h4> -->
+            <p class="endpoint__desc">
+              Use Multiple providers to enhance your sign in anf sign up flow
+            </p>
+            <div class="endpoint__test">
+              <div class="test__heading col d-flex justify-content-between">
+                <div class="d-flex">
+                  <h4>URL</h4>
+                  <p class="test__action__btn--post ml-3">POST</p>
+                </div>
+                <div class="github">
+                  <a href="" class="github__link">
+                    Github Repo &nbsp;&nbsp;&nbsp;&#8594;
+                  </a>
+                </div>
+              </div>
+              <div class="endpoint__test__textarea">
+                <textarea readonly
+                  id="">https://microapi.dev/authenticationapi/signin?=true-user/this-could-be-multiline</textarea>
+                <div class="endpoint__test__copy">
+                  <a onclick="copyText(this)">
+                    <span class="fa fa-copy"></span>
+                    Copy
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="param">
+              <h4 class="param__heading">Path Parameters</h4>
+              <div class="param__type">
+                <div class="param__type__heading">
+                  <span>userData<span class="asterisk">*</span> </span>
+                  <span class="param__type__data">Map&lt;String,dynamic&gt;</span>
+                </div>
+                <div class="param__type__desc mt-2">
+                  <p>
+                    This is a map of user data It contains sign up information
+                    needed
+                    from
+                    the user before auth
+                  </p>
+                </div>
+                <div class="param__type__sample">
+                  <div class="d-flex justify-content-between">
+                    <span>username</span>
+                    <span>string</span>
+                  </div>
+                  <div class="d-flex justify-content-between">
+                    <span>username</span>
+                    <span>string</span>
+                  </div>
+                  <div class="d-flex justify-content-between">
+                    <span>username</span>
+                    <span>string</span>
+                  </div>
+                </div>
+              </div>
+              <div class="param__type">
+                <div class="param__type__heading">
+                  <span>authToken<span class="asterisk">*</span> </span>
+                  <span class="param__type__data ml-3">String</span>
+                </div>
+                <div class="param__type__desc mt-2">
+                  <p>
+                    This is a map of user data It contains sign up information
+                    needed
+                    from
+                    the user before auth
+                  </p>
+                </div>
+              </div>
+              <div class="param__type">
+                <div class="param__type__heading">
+                  <span>expireTime<span class="asterisk">*</span> </span>
+                  <span class="param__type__data ml-3">String</span>
+                </div>
+                <div class="param__type__desc mt-2">
+                  <p>
+                    This is a map of user data It contains sign up information
+                    needed
+                    from
+                    the user before auth
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="endpoint__sample col-12 col-lg-4 ml-md-3 ml-lg-0 pl-lg-0 d-flex flex-column">
+          <div class="">
+            <div class="endpoint__sample__req">
+              <p class="heading">Sample Request</p>
+              <div class="req">
+                <select name="req-platform" class="req-platform px-3">
+                  <option value="node">NodeJS</option>
+                  <option value="php">PHP</option>
+                  <option value="python">Python</option>
+                </select>
+                <code class="req__code">
+                  node request goes here
+                </code>
+              </div>
+            </div>
+            <div class="endpoint__sample__res mt-3">
+              <p class="heading">Sample Response</p>
+              <div class="res">
+                <div class="res__type d-flex">
+                  <div class=" res__tab active_tab px-3" onclick="showOk(this)">200
+                  </div>
+                  <div class="res__tab px-3" onclick="showBad(this)">400 Bad Request
+                  </div>
+                </div>
+                <div class="res__body">
+                  <code class="resp">
+                    {
+                    "userData" : {
+                    "username" : "Dikamsi Design"
+                    }
+                    }
+                  </code>
+                  <code class="resp" style="display: none;">
+                    {
+                    "userData1" : {
+                    "username" : "Dikamsi Design"
+                    }
+                    }
+                  </code>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

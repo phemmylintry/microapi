@@ -1,0 +1,277 @@
+     .navbody{
+        *{
+            overflow-x:visible !important;
+        }
+        p {
+            margin:0;
+            padding:0;
+        } 
+      a{
+          text-decoration: none;
+      }
+
+        // width:80%;
+        margin:2em auto;
+        .docs_navbar{
+            display:flex;
+            position: relative;
+            margin: 2em 4.5em;
+
+            img{
+                width:30px;
+                height:30px;
+                // margin-top: 1em;
+            }
+            .words{
+                padding-left:1.5em;
+                display:flex; 
+                     .doc_img{
+                        display: inline;
+                        img{
+                            margin: 1.2em;
+                        }
+                    }
+                    h1{
+                        font-size:30px;
+                        margin-bottom:0em !important;
+                    }
+                    p{
+                        font-size:13px;
+                    }
+            }
+            .users_rating{
+                display: flex;
+                padding-left: 33em;
+                text-align: center;
+                .less{
+                    font-size:18px;
+                }
+                .more{
+                    font-size:25px;
+                    font-weight: bold;
+                }
+                .users{
+                    display: inline;
+                    // padding:0em 4em;
+                }
+                .vl{
+                    margin: 0em 1.6em;
+                   width:1px;
+                    height:65px;
+                    background-color: gray;
+                }
+                .rating{
+                    display: inline;
+                    // padding:1em 1em;
+                    .fa-star{
+                        font-size:28px;
+                        padding-right: 0.3em;;
+                    }
+                }
+            }
+        }
+        .itemlink{
+            padding:1em 6.5em;
+            display:flex;
+            border-top:2px solid gray;
+            border-bottom:2px solid gray;
+            a{
+                color:black;
+                text-decoration: none;
+                &:hover{
+                    color:rgb(158, 206, 96)
+                }
+            }
+           .hire{
+            padding-left: 30em;;
+           }
+            .item-link{
+               padding:1em; 
+               &:hover{
+                color:rgb(158, 206, 96);
+                border-bottom: 3px solid black;
+            }
+               
+            }
+            
+            .dropdown{
+                display:none
+            }
+        }
+
+    .navbartwo{
+        padding:0.4em 6.5em;
+        .item-link{
+            padding:0.5em; 
+            font-size:10px;
+         }
+         .fa-chevron-right{
+            font-size:10px;
+         }
+    }
+}
+
+
+
+
+@media  only screen and (max-width: 480px) {    
+    .navbody{
+        *{
+            overflow-x:visible !important;
+        }
+        width:100% !important;
+        .docs_navbar{
+            display:block;
+            margin: 1.5em;
+            
+            .words{
+                display:flex;
+                 padding-left: 0em; 
+                 .doc_img{
+                    display: inline;
+                    img{
+                        margin-right: 1.2em;
+                    }
+                }
+                h1{
+                    font-size:20px;
+                }
+                p{
+                    font-size:13px;
+                }
+            }
+        }
+        .users_rating{
+            padding:1.5em 0em;
+            width:60%;
+            margin:auto;
+            padding-left:0em!important;
+            .less{
+                font-size:20px;
+            }
+            .more{
+                font-size:25px;
+                font-weight: bold;
+            }
+            .users{
+                display: inline;
+                // padding:0em 4em;
+            }
+            
+            .rating{
+                display: inline;
+                // padding:1em 1em;
+                .fa-star{
+                    font-size:28px;
+                    padding-right: 0.3em;;
+                }
+            }
+        }
+        .itemlink{
+                padding:0.5em 1em;
+                .list-item{
+                    display: none;
+                }
+                .dropdown{
+                    display:block;
+                    
+                }
+                .hire{
+                    padding: .375rem 0em .375rem 3.5rem;
+                   
+                }
+                
+            }
+            .item-link{
+                padding: 0.7em !important;
+                &:hover{
+                    color:rgb(158, 206, 96)
+                }
+            }
+            .navbartwo {
+                padding: 0em 1em;
+            }
+    }
+}
+
+
+@media only screen and (min-width: 480px)and (max-width: 991px) { 
+
+  .navbody{
+    *{
+        overflow-x:visible !important;
+    }
+    width:100% !important;
+    .docs_navbar{
+        display:block;
+        margin: 1.5em;
+        
+        .words{
+            display:flex;
+             padding-left: 0em; 
+             .doc_img{
+                display: inline;
+                img{
+                    margin-right: 1.2em;
+                }
+            }
+            h1{
+                font-size:20px;
+            }
+            p{
+                font-size:13px;
+            }
+        }
+    }
+    .users_rating{
+        padding:1.5em 0em;
+        width:60%;
+        margin:auto;
+        padding-left:0em!important;
+        .less{
+            font-size:20px;
+        }
+        .more{
+            font-size:25px;
+            font-weight: bold;
+        }
+        .users{
+            display: inline;
+            // padding:0em 4em;
+        }
+       
+        .rating{
+            display: inline;
+            // padding:1em 1em;
+            .fa-star{
+                font-size:28px;
+                padding-right: 0.3em;;
+            }
+        }
+    }
+    .itemlink{
+            padding:0.5em 1em;
+            .list-item{
+                display: none;
+            }
+            .dropdown{
+                display:block;
+                
+            }
+            .hire{
+                padding: .375rem 0em .375rem 20em;
+            
+            }
+            
+        }
+        .item-link{
+            padding: 0.7em !important;
+            &:hover{
+                color:rgb(158, 206, 96)
+            }
+        }
+        .navbartwo {
+            padding: 0em 1em;
+        }
+}
+}

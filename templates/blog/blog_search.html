@@ -1,0 +1,61 @@
+{% extends 'homepage/base.html' %}
+
+{% block content %}
+
+{% load static %}
+
+<body id="blog_search">
+
+ 
+    <!-- Main body goes here -->
+    <div class="blog">
+        <div class="blog__header">
+            <h2>Search results for "API"</h2>
+            <div class="blog__header__content">
+                <input class="blog__header__content__search" type="search" placeholder="Search Blog"/>
+                <select class="blog__header__content__sort" name="sort">
+                    <option value="">Sort by lastest</option>
+                    <option value="">Sort by lastest</option>
+                </select>
+            </div>
+        </div>
+        <div class="blog__mainsection">
+            <div class="blog__mainsection__result">
+                <div class="blog__mainsection__result__description">
+                    <p>2 Weeks Ago</p>
+                    <p class="blog__mainsection__result__description__title">What is REST API? Uses, Advantages and Edges.</p>
+                </div>
+                <div class="blog__mainsection__result__img"><img alt="" src="{% static 'img/Rectangle544.png' %}"/></div>
+            </div>
+            <div class="blog__mainsection__result">
+                <div class="blog__mainsection__result__description">
+                    <p>2 Weeks Ago</p>
+                    <p class="blog__mainsection__result__description__title">What is REST API? Uses, Advantages and Edges.</p>
+                </div>
+                <div class="blog__mainsection__result__img"><img alt="" src="{% static 'img/Rectangle545.png' %}"/></div>
+            </div>
+            <div class="blog__mainsection__result">
+                <div class="blog__mainsection__result__description">
+                    <p>2 Weeks Ago</p>
+                    <p class="blog__mainsection__result__description__title">What is REST API? Uses, Advantages and Edges.</p>
+                </div>
+                <div class="blog__mainsection__result__img"><img alt="" src="{% static 'img/Rectangle546.png' %}"/></div>
+            </div>
+            <div class="blog__mainsection__result">
+                <div class="blog__mainsection__result__description">
+                    <p>2 Weeks Ago</p>
+                    <p class="blog__mainsection__result__description__title">What is REST API? Uses, Advantages and Edges.</p>
+                </div>
+                <div class="blog__mainsection__result__img"><img alt="" src="{% static 'img/Rectangle547.png' %}"/></div>
+            </div>
+            <div class="blog__mainsection__result">
+                <div class="blog__mainsection__result__description">
+                    <p>2 Weeks Ago</p>
+                    <p class="blog__mainsection__result__description__title">What is REST API? Uses, Advantages and Edges.</p>
+                </div>
+                <div class="blog__mainsection__result__img"><img alt="" src="{% static 'img/Rectangle548.png' %}"/></div>
+            </div>
+        </div>
+    </div>
+    
+{% endblock %}

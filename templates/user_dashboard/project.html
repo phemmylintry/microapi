@@ -1,0 +1,198 @@
+{% extends 'user_dashboard/dash_base.html' %}
+
+{% block content %}
+{% load static %}
+{% load dash_extra %}
+
+<div id="settings">
+  {% if user_proj %}
+    {% for user in user_proj %}
+    <div class="dashboard__title">
+      <h1>{{ user.name }}</h1>
+      <h4>API key: {{ spef_proj.token }}</h4>
+    </div>
+
+  <div class="dashboard__subtitle">
+    <h4>Active APIs</h4>
+    {% if messages %}
+    <div class="text-primary">
+      {% for message in messages %} {{ message }} {% endfor %}
+    </div>
+    {% endif %}
+    
+
+  </div>
+    <section id="container">
+      <article class="dropBox active-row">
+
+
+        <div id="empty-api" class="empty-api"
+          style="display:none; flex-direction:column; justify-content:center; align-items:center; width: 100%">
+          <div className="icon">
+            <span class="material-icons" style="font-size: 65px; color: lightgrey">assignment_late</span>
+          </div>
+
+          <div className="text" style="text-align:center;">
+            <h4 style="color: lightgrey">There's nothing here</h4>
+            <p style="color: lightgrey;">Drag from available APIs or use the add button to add new API</p>
+          </div>
+        </div>
+        
+        
+        <!-- Single box -->
+        {% for item in api_list %}
+        <!-- {{item.description}} -->
+        {% if item in user.project_api.all %}
+          <div class="dragBox active-box">
+            <div class="api__box">
+              <div class="api__box__shadow">
+                <div class="api__box__inner">
+                  <div class="api__box__heading">
+                
+            
+                      <h5><img src="{{ item.icon }}" height="30px" width="30px"/> {{ item.title }}</h5>
+
+                    </div>   
+                    <div class="api__box__text">
+                        <small>{{ item.description }}</small>
+                      </div>
+                      <div class="api__box__stats">
+                        <p><br>
+                          <span>{{ item.stats }}</span>
+                        </p>
+                      </div>
+                      <div class="api__box__buttons">
+                            <a href="{% url 'dashboard:configure_api' spef_proj.id item.id %}"><button class="primary-btn"><i class="fas fa-cogs"></i></button></a>
+                            
+                            <!-- <input type="radio" name="" id=""> -->
+                            <!-- success -->
+                            <form method="POST" staturl="{% url 'dashboard:activate_api' user.id item.id %}">
+                              {% with pe|get_configs:item as odjs %}                            
+                              {% if odjs.is_active == True %}
+                              {% csrf_token %}  
+                                <div class="pretty p-switch p-fill">
+                                <input type="checkbox" checked name="toggule" pro_id="{{ user.id }}" ap_id="{{ item.id }}" onchange="activateFunction(this)" id="{{item.id}}_checkbox" />
+                                   
+                                    <div class="state p-success">
+                                        <label></label>
+                                    </div>
+                                  </div>
+      
+                              {% else %}
+                                <div class="pretty p-switch p-fill">
+                                  <input type="checkbox" name="toggule" pro_id="{{ user.id }}" ap_id="{{ item.id }}" onchange="activateFunction(this)" id="{{item.id}}_checkbox" />
+                                  <div class="state p-success">
+                                      <label></label>
+                                  </div>
+                                </div>
+                              {% endif %}
+                              {% endwith %}
+                            </form>
+                            
+                          </div>
+                      
+                        <div class="api__box__buttons-d mt-1">
+                        <a href="{% url 'dashboard:adding_api' user.id item.id %}"><button class="primary-btn">Remove</button></a>
+                  </div> 
+        {% endif %}           
+        {% endfor %}
+      </article>
+
+      <div class="search-box">
+        <div class="search-box__head">
+          <h3>Available APIs</h3>
+        </div>
+        <div class="search-box__input">
+          <label for="search">
+            <i class="fas fa-search"></i>
+            <input type="text" placeholder="Search for APIs">
+          </label>
+        </div>
+      </div>
+      
+      <article class="dropBox inactive-row">
+        
+        {% for item in api_list %}
+
+        {% if item not in user.project_api.all %}
+        <div class="dragBox inactive-box">
+          <div class="api__box">
+            <div class="api__box__shadow">
+              <div class="api__box__inner">
+                <div class="api__box__heading">
+                <h5><img src="{{ item.icon }}" height="30px" width="30px"/></i> {{ item.title }}</h5> 
+                <!-- <h5>{{ item.title }}</h5> -->
+                  <!-- toggle -->
+                  <div class="pretty p-switch p-fill">
+                    <input type="checkbox" />
+                    <div class="state p-success">
+                      <label></label>
+                    </div>
+                  </div>
+                </div>
+                <div class="api__box__text">
+                  <small>{{ item.description }}</small>
+                </div>
+                <div class="api__box__stats">
+                  <p>Stats <br>
+                    <span>{{ item.stats }}</span>
+                  </p>
+                </div>
+                <div class="api__box__buttons">
+                  <a href="{% url 'dashboard:adding_api' user.id item.id %}"><button class="secondary-btn">+ Add API</button></a>
+                  <!-- <input type="radio" name="" id=""> -->
+                  <!-- success -->
+                  <div class="prindex.html pretty p-default p-round p-toggle">
+                    <input type="checkbox" />
+                    <div class="state p-success p-on">
+                      <label></label>
+                    </div>
+                    <div class="state p-danger p-off">
+                      <label></label>
+                    </div>
+                  </div>
+                </div>
+                
+
+              </div>
+            </div>
+          </div>
+        </div> <!-- Single box end -->
+        {% endif %}
+        {% endfor %}
+        
+      </article>
+      
+    </section>
+
+  </div>
+</div>
+</div>
+{% endfor %}
+{% endif %}
+</div>
+<script>
+  function activateFunction(whol) {
+    var value = whol.id;
+    console.log("#" +value);
+    var ident ="#" + value;
+    console.log(whol.checked);
+    var apibox = $(ident);
+    active = (apibox.is(':checked'));
+    var form = apibox.closest("form");
+    $.ajax({
+        url: form.attr("staturl"),
+        method: 'POST',
+        dataType: 'json',
+        data: {
+          'active':active,
+          'csrfmiddlewaretoken': '{{ csrf_token }}'
+        },
+        contentType: 'application/x-www-form-urlencoded',
+        success: function (data) {
+          console.log(data)
+        }
+      });
+    }
+</script>
+{% endblock %}

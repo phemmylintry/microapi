@@ -1,0 +1,112 @@
+{% extends 'user_dashboard/dash_base.html' %}
+
+{% block content %}
+{% load static %}
+{% load dash_extra %}
+    <div class="content">
+      </header>
+        <div class="configure_blog">
+          <div class="configure_blog__main row ml-3 mt-4 mr-3">
+          <!-- code goes here-->
+          <div class="configure_blog_sect1__cont1 col-lg-8 ">
+            <div class="configure_blog_sect1__cont2">
+              <h2>Configure {{ap_name}}</h2>
+              <p>This is a map of user data. It contains sign up information needed from the user before auth</p>
+              <div class="configure_blog_sect1__cont2__apigraph">
+                <h5>API Usage</h5>
+                <div class="configure_blog_sect1__cont2__apigraph__cont">
+                  <div class="apistatus"><div class="apistatus__dot"></div>Status</div>
+                  <div class="apistats"><div class="apistats__dot"></div>Stats</div>
+                  <div class="apigraph_cont"><canvas id="apigraph"></canvas>  </div>
+                </div>
+              </div>
+              <form method="POST" id="creds">
+                {% csrf_token %}
+                {% if not first_time %}
+                {% for k,v in edit_settings.items %}
+                <div class="box">
+                    <label for="apiKey">{{k}}</label>
+                    <input type="text" value="{{v}}" placeholder="23pcei3434kef" required name="{{k}}">
+                  </div>
+                {% endfor %}
+                {% else %}
+                {% for fields in settings %}
+                {% if fields|get_item:"setting_name" in oauth %}
+              
+                {% for ents in fields|get_item:"setting_value" %}
+            
+                <div class="box">
+                  <label for="apiKey">{{ents|get_item:"setting_name"}}</label>
+                  <input type="text" placeholder="23pcei3434kef" {% if ents|get_item:"setting_required" == True %} required {% endif %} name="{{ents|get_item:"setting_name"}}">
+              
+                </div>
+                {% endfor %}
+                {% else %}
+                <div class="box">
+                    <label for="apiKey">{{fields|get_item:"setting_name"}}</label>
+                    <input type="text" placeholder="23pcei3434kef" {% if fields|get_item:"setting_required" == True %} required {% endif %} name="{{fields|get_item:"setting_name"}}">
+                  </div>
+                  {% endif %}
+                  {% endfor %}
+                  {% endif %}
+                  
+                </div>
+              </form>
+              {% if not first_time %}
+              <div class="configure_blog_sect1__cont2__footer">
+                <a><button type="submit" form="creds" name="update_btn">
+                  <!-- <i class="fas fa-save"></i> -->
+                  Update
+                </button></a>
+           
+                <a><button type="submit" form="creds" name="create_btn">
+                  <!-- <i class="fas fa-save"></i> -->
+                  Create
+                </button></a>
+              </div>
+              {% else %}
+              <div class="configure_blog_sect1__cont2__footer">
+                <a><button type="submit" form="creds" name="save_btn">
+                  <i class="fas fa-save"></i>Save
+                </button></a>
+              </div>
+              {% endif %}
+            </div>
+          </div>
+          <div class="configure_blog_sect2 col-lg-3 ml-3 mb-4">
+            <div class="configure_blog_sect2__pie">
+              <h4>Statistics</h4><hr>
+              <p>Overall API Usage</p>
+              <div class="pie_chart"><canvas id="pie"></canvas></div>
+            </div>
+            <div class="configure_blog_sect2__doc">
+              <h4>Documentation<i class="fas fa-search"></i></h4><hr>
+              <ul>
+                {% for path,paths_info in paths.items %}
+                  <li><a href="#">{{ url|addstr:path }}</a></li>
+                {% endfor %}
+              </ul>
+              <a class="view__doc"><i class="fas fa-file"></i>View doc</a>
+          </div>
+          <div class="configure_blog_sect2__git">
+            <a href="#">Open GitHub</a>
+          </div>
+          <div class="configure_blog_sect2__sample">
+            <h4>Code sample</h4><hr>
+            <p>Select Language</p>
+            <select name="language" id="language">
+              <option value="python">Python</option>
+              <option value="java">Java</option>
+              <option value="javascript">Javascript</option>
+            </select>
+            <h5>Easily download code sample of different programming languages</h5>
+            <a href="#"><i class="fas fa-book-open"></i>view sample</a><hr>
+            <a href="#"><i class="fas fa-download"></i>Download</a>
+          </div>
+        </div> 
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,47 @@
+#contact {
+
+  //write inside here only
+  * {
+    overflow: hidden;
+  }
+
+  .contact,
+  .contact__main,
+  .contact__intro {
+    margin: 5rem auto;
+  }
+
+  .contact__header,
+  .contact__intro {
+    margin: auto !important;
+    text-align: center;
+  }
+
+  .fa-phone {
+    transform: rotate(90deg);
+  }
+
+  .detail__link {
+    color: $primary-color;
+  }
+
+  .form__element {
+    width: 100%;
+    margin: 0.2rem 0;
+    padding: 0.5rem;
+    border: solid 1px rgb(189, 188, 188);
+  }
+
+  .form__element:not(textarea) {
+    height: 2.5rem;
+  }
+
+  .form__element:focus {
+    outline: none;
+  }
+
+  .button.form__element {
+    background: $primary-color;
+    color: $secondary-color;
+  }
+}

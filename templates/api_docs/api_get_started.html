@@ -1,0 +1,126 @@
+{% block content %}
+
+{% load static %}
+<!-- Main body goes here -->
+
+<div id="get-started" class="tab__content">
+
+  <article class="getstarted container col-12 col-lg-11 col-xl-9 mx-auto">
+    <div class="getstarted__header heading container col-12 mx-auto text-center">
+      <h1 class="text-center">Get Started With {{ info.title }}</h1><br>
+      <p>{{ info.description }}</p>
+    </div>
+
+
+    <div class="code row">
+      <div
+        class="attribute col-md-4 d-flex flex-column align-items-center">
+        <img src="{% static 'img/nocode.svg' %}" alt="no-code tool" />
+        <p> No-Code Tool</p>
+      </div>
+      <!-- <div class="v2"></div> -->
+      <div
+        class="attribute attribute--modifier col-md-4 d-flex flex-column align-items-center">
+        <img src="{% static 'img/easy-implementation.svg' %}" alt="no-code tool" />
+        <p> Easy Integration</p>
+      </div>
+      <!-- <div class="v2"></div> -->
+      <div
+        class="attribute col-md-4 d-flex flex-column align-items-center">
+        <img src="{% static 'img/fast.svg' %}" alt="no-code tool" />
+        <p> Fast Implementation</p>
+      </div>
+    </div>
+  </article>
+
+
+  <article class="frameworks py-5 py-md-5">
+    <div class="col-12 col-md-6 col-lg-5 mx-auto my-3 text-center">
+      <p>SEAMLESS INTEGRATION WITH YOUR FAVORITE FRAMEWORKS</p>
+    </div>
+    <div class="int container d-flex flex-column flex-md-row flex-wrap justify-content-around">
+      <div class="col-8 col-md-4 col-lg-2 my-3 my-md-3 flex-grow-1 mx-auto text-center align-items-center">
+        <img src="{% static 'img/next.svg'%}" alt="" class="">
+      </div>
+      <div class="col-8 col-md-4 col-lg-2 my-3 my-md-3 flex-grow-1 mx-auto text-center align-items-center">
+        <img src="{% static 'img/react 1.svg'%}" alt="">
+      </div>
+      <div class="col-8 col-md-4 col-lg-2 my-3 my-md-3 flex-grow-1 mx-auto text-center align-items-center">
+        <img src="{% static 'img/ember.svg'%}" alt="">
+      </div>
+      <div class="col-8 col-md-4 col-lg-2 my-3 my-md-3 flex-grow-1 mx-auto text-center align-items-center">
+        <img src="{% static 'img/vue.svg'%}" alt="">
+      </div>
+      <div class="col-8 col-md-4 col-lg-2 my-3 my-md-3 flex-grow-1 mx-auto text-center align-items-center">
+        <img src="{% static 'img/angular.svg'%}" alt="">
+      </div>
+      <div class="col-8 col-md-4 col-lg-2 my-3 my-md-3 flex-grow-1 mx-auto text-center align-items-center">
+        <img src="{% static 'img/gatsby.svg'%}" alt="">
+      </div>
+    </div>
+  </article>
+
+
+  <article id="features">
+    <div class="features__header">
+      <h3>Features</h3>
+      <p class="">See features that let you speed up and manage your user’s authentication seamlessly
+      </p>
+    </div>
+    <div class="features__content row ">
+      <div class="features__content__box">
+        <h5>Sign In/Sign Up</h5>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris</p>
+        <button>Learn More</button>
+      </div>
+      <div class="features__content__box">
+        <h5>Payment Authentication</h5>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris</p>
+        <button>Learn More</button>
+      </div>
+      <div class="features__content__box">
+        <h5>Sign In/Sign Up</h5>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris</p>
+        <button>Learn More</button>
+      </div>
+      <div class="features__content__box">
+        <h5>Payment Authentication</h5>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris</p>
+        <button>Learn More</button>
+      </div>
+      <!-- <div class="features__content__box">
+        <h5>Sign In/Sign Up</h5>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris</p>
+        <button>Learn More</button>
+      </div> -->
+    </div>
+    <div id="trial" class="container px-0">
+      <div class="trial__header col-11 col-md-8 col-lg-6 mx-auto my-3 text-center">
+        <h3>Ready to try it out?</h3>
+        <p>
+          Get 500 free request on our Authentication API for a year with unlimited support
+        </p>
+      </div>
+      <div class="subform">
+        <input type="email" name="email" placeholder="Enter your Email" >
+        <button type=" submit" class="">Sign Up</button>
+      </div>
+    </div>
+  </article>
+
+  <!-- section last -->
+
+</div>
+
+<!-- </body> -->
+{% endblock %}

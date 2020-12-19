@@ -1,0 +1,254 @@
+#get-started {
+  $border-color: #F4F4F4;
+  $font-color: #646464;
+  $sample-bg: #0b0a08ce;
+  $hover-bg: #4e4e4e;
+  $orange: #ff4500;
+  $black: #000000;
+  margin: 0;
+  padding: 0;
+
+  .getstarted {
+    .getstarted__header{
+      h1{
+        font-size: 72px !important;
+        line-height: 88px !important;
+      }
+      p{
+        font-size: 20px;
+      }
+    }
+  }
+  .code {
+    margin: 60px auto !important;
+    min-height: 8rem;
+    .attribute--modifier{
+        border-left: 1px solid #988E8E;
+        border-right: 1px solid #988E8E;
+    }
+    img {
+      margin: auto;
+      margin-bottom: 30px;
+    }
+    p{
+      font-weight: 600;
+    }
+  }
+  article.frameworks {
+    background: $border-color;
+
+    img {
+      margin: auto;
+    }
+  }
+  #features {
+    width: 1000px;
+    margin: auto;
+    margin-bottom: 40px;
+      .features__header{
+        text-align: center;
+        padding-top: 20px;
+        width: 600px;
+        margin: auto;
+        h3{
+          font-size: 36px;
+          font-weight: 800;
+        }
+        p{
+          font-size: 20px;
+        }
+      }
+      .features__content{
+        width: 900px;
+        margin: auto;
+        &__box{
+          width: 350px;
+          height: 305px;
+          border: 1px solid #000000;
+          padding: 40px 25px;
+          float: left;
+          margin: 30px 50px;
+          position: relative;
+          h5{
+            font-size: 18px;
+            line-height: 24px;
+            margin-bottom: 20px;
+          }
+          p{
+            font-size: 14px;
+            line-height: 16px;
+          }
+          button{
+            background: #F4F4F4;
+            border: none;
+            outline: none;
+            width: 130px;
+            height: 50px;
+            font-size: 15px;
+            position: absolute;
+            bottom: 50px;
+            &:hover{
+                border: 1px solid $primary-color;
+                box-shadow: inset 0 0 2px 0px $theme-color;
+            }
+          }
+        }
+      }
+  }
+  #trial {
+    .trial__header{
+      h3{
+        font-size: 36px;
+      }
+      p{
+        font-size: 20px;
+      }
+    }
+    .subform {
+      
+      margin: auto;
+      text-align: center;
+      input {
+        width: 500px;
+        height: 45px;
+        margin-right: 2%;
+        padding-left: 3px;
+      }
+      button{
+        width: 120px;
+        height: 45px;
+        background: #000000;
+        color: $secondary-color;
+        border: none;
+      }
+    }
+  }
+}
+@media (max-width:1200px){
+  #get-started{
+    #features {
+      width: 850px;
+      .features__content{
+        width: 100%;
+        &__box{
+          margin: 30px 37.5px;
+        }
+      }
+    }
+  }
+}
+@media (max-width:900px){
+  #get-started{
+    #features {
+      width: 700px;
+      .features__header{
+        width: 90%;
+      }
+      .features__content{
+        &__box{
+          margin: 30px 25px;
+          width: 300px;
+        }
+      }
+    }
+    #trial {
+      .subform {
+        input {
+          width: 400px;
+        }
+        button{
+          width: 100px;
+          height: 45px;
+        }
+      }
+    }
+  }
+}
+@media (max-width:767px){
+  #get-started {
+    .code {
+      margin-bottom: 0px !important;
+      .attribute{
+        margin-bottom: 20px;
+        &--modifier{
+          border: none;
+        }
+      }
+    }
+    .getstarted {
+      .getstarted__header{
+        h1{
+          font-size: 60px !important;
+          line-height: 70px !important;
+        }
+      }
+    }
+    #features {
+      width: 600px;
+      .features__content{
+        &__box{
+          margin: 30px 125px;
+          width: 350px;
+        }
+      }
+    }
+  }
+}
+@media (max-width:650px){
+  #get-started {
+    .getstarted {
+      .getstarted__header{
+        h1{
+          font-size: 39px !important;
+          line-height: 55px !important;
+        }
+      }
+    }
+    #features {
+      width: 90%;
+      .features__header{
+        h3{
+          font-size: 32px;
+        }
+      }
+      .features__content{
+        width: 100%;
+        &__box{
+          width: 300px;
+          height: 280px;
+          padding: 40px 15px;
+          margin: 10px auto;
+          float: none;
+          button{
+              bottom: 20px;
+          }
+        }
+      }
+      #trial {
+        .subform {
+          input {
+            width: 90%
+          }
+          button{
+            margin: auto;
+            margin-top: 15px;
+            width: 200px;
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width:350px){
+  #get-started {
+    #features {
+      .features__content{
+        &__box{
+          width: 100%;
+          padding: 40px 7%;   
+        }
+      }
+    } 
+  }
+}

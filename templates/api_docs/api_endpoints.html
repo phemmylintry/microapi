@@ -1,0 +1,234 @@
+{% block content %}
+
+{% load static %}
+{% load api_docs_extras %}
+
+<div id="endpoint" class="container tab__content invisible">
+  <div class="container-fluid d-flex flex-column flex-md-row">
+    <div class="quicknav col-12 col-md-5 col-lg-3 px-0">
+      <div class="shortcut__search__form d-flex align-items-center">
+        <button type="submit" class="col-2 p-0">
+          <span class="fa fa-search"></span>
+        </button>
+        <input type="search" name="endpoint-search" placeholder="Search Endpoints..." class="col-10 p-0">
+      </div>
+      <div class="shortcuts p-0">
+        <div class="shortcut">
+          <h5 class="shortcut__heading">{{ info.title }}</h5>
+          {% for path,paths_info in paths.items %}
+            {% for path_type,path_info in paths_info.items %}
+              <a href="" class="shortcut__link col d-flex align-items-center">
+                {% if path_type == "get" %}
+                  <div class="shortcut__link__btn--post mr-1 text-uppercase bg-primary">
+                    {{ path_type }}
+                  </div>
+                {% elif path_type == "post" %}
+                  <div class="shortcut__link__btn--post mr-1 text-uppercase bg-success">
+                    {{ path_type }}
+                  </div>
+                {% elif path_type == "patch" %}
+                  <div class="shortcut__link__btn--post mr-1 text-uppercase bg-warning">
+                    {{ path_type }}
+                  </div>
+                {% elif path_type == "delete" %}
+                  <div class="shortcut__link__btn--post mr-1 text-center text-uppercase bg-danger">
+                    {{ path_type }}
+                  </div>  
+                {% endif %}
+                <div class="shortcut__link__text">
+                  {{ path_info.tags|first }}
+                </div>
+              </a>
+            {% endfor %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+
+    <div class="endpoints col-12 col-md-7 col-lg-9 mt-5 mx-auto px-0 pr-md-0 d-flex flex-column">
+      {% for path,paths_info in paths.items %}
+        <div class="d-flex flex-column flex-lg-row my-5">
+          <div class="endpoint__desc col-12 col-lg-8 pl-md-3 px-lg-3 px-0 pl-lg-0">
+            <div class="endpoint col-12 col-lg-11 pr-md-0 px-0 mx-auto">
+              <h4 class="endpoint__heading">
+                {% for path_type,path_info in paths_info.items %}
+                  {% ifchanged path_info.tags|first %}
+                    {{ path_info.tags|first }}
+                  {% endifchanged %}
+                {% endfor %}
+              </h4>
+              <!-- <h4 class="endpoint__subheading">Sign In With Email</h4> -->
+              <p class="endpoint__desc">
+                {% for path_type,path_info in paths_info.items %}
+                    {{ path_info.description }}
+                {% endfor %}
+              </p>
+              <div class="endpoint__test">
+                <div class="test__heading col d-flex justify-content-between">
+                  <div class="d-flex"  style="text-align: center;">
+                    <h4>URL</h4>
+                    
+                    {% for path_type,path_info in paths_info.items %}
+                      {% if path_type == "get" %}
+                        <p class="test__action__btn--post ml-3 text-uppercase bg-primary">
+                          {{ path_type }}
+                        </p>
+                      {% elif path_type == "post" %}
+                        <p class="test__action__btn--post ml-3 text-uppercase bg-success">
+                          {{ path_type }}
+                        </p>
+                      {% elif path_type == "patch" %}
+                        <p class="test__action__btn--post ml-3 text-uppercase bg-warning">
+                          {{ path_type }}
+                        </p>
+                      {% elif path_type == "delete" %}
+                        <p class="test__action__btn--post ml-3 text-uppercase bg-danger">
+                          {{ path_type }}
+                        </p>   
+                      {% endif %}
+                    {% endfor %}
+                  
+                  </div>
+                  <div class="github">
+                    <a href="" class="github__link">
+                      Github Repo &nbsp;&nbsp;&nbsp;&#8594;
+                    </a>
+                  </div>
+                </div>
+                <div class="endpoint__test__textarea">
+                  <textarea readonly
+                    id="">
+                    {{ url|addstr:path }}
+                  </textarea>
+                  <div class="endpoint__test__copy">
+                    <a onclick="copyText(this)">
+                      <span class="fa fa-copy"></span>
+                      Copy
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="param">
+                <h4 class="param__heading">Path Parameters</h4>
+                <div class="param__type">
+                  <div class="param__type__heading">
+                    <span>userData<span class="asterisk">*</span> </span>
+                    <span class="param__type__data">Map&lt;String,dynamic&gt;</span>
+                  </div>
+                  <div class="param__type__desc mt-2">
+                    <p>
+                      This is a map of user data It contains sign up information
+                      needed
+                      from
+                      the user before auth
+                    </p>
+                  </div>
+                  <div class="param__type__sample">
+                    <div class="d-flex justify-content-between">
+                      <span>username</span>
+                      <span>string</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                      <span>username</span>
+                      <span>string</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                      <span>username</span>
+                      <span>string</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="param__type">
+                  <div class="param__type__heading">
+                    <span>authToken<span class="asterisk">*</span> </span>
+                    <span class="param__type__data ml-3">String</span>
+                  </div>
+                  <div class="param__type__desc mt-2">
+                    <p>
+                      This is a map of user data It contains sign up information
+                      needed
+                      from
+                      the user before auth
+                    </p>
+                  </div>
+                </div>
+                <div class="param__type">
+                  <div class="param__type__heading">
+                    <span>expireTime<span class="asterisk">*</span> </span>
+                    <span class="param__type__data ml-3">String</span>
+                  </div>
+                  <div class="param__type__desc mt-2">
+                    <p>
+                      This is a map of user data It contains sign up information
+                      needed
+                      from
+                      the user before auth
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="endpoint__sample col-12 col-lg-4 ml-md-3 ml-lg-0 pl-lg-0 d-flex flex-column">
+            <div class="">
+              <div class="endpoint__sample__req">
+                <p class="heading">Sample Request</p>
+                <div class="req">
+                  <select name="req-platform" class="req-platform px-3">
+                    <option value="node">NodeJS</option>
+                    <option value="php">PHP</option>
+                    <option value="python">Python</option>
+                  </select>
+                  <code class="req__code">
+                    node request goes here
+                  </code>
+                </div>
+              </div>
+              <div class="endpoint__sample__res mt-3">
+                <p class="heading">Sample Response</p>
+                <div class="res">
+                  <div class="res__type d-flex">
+                    {% for path_type,path_info in paths_info.items %}
+                      {% for type in path_info.responses.keys %}
+                        {% if type == '200' %}
+                          <div class=" res__tab active_tab px-3" onclick="showOk(this)">
+                            200
+                          </div>
+                        {% endif %}
+                      {% endfor %}
+                    {% endfor %}
+                   
+                    {% for path_type,path_info in paths_info.items %}
+                      {% for type in path_info.responses.keys %}
+                        {% if type != '200' %}
+                          <div class="res__tab px-3" onclick="showBad(this)">
+                            {{ type }}
+                          </div>
+                        {% endif %}
+                      {% endfor %}
+                    {% endfor %}
+                  </div>
+                  <div class="res__body">
+                    {% for path_type,path_info in paths_info.items %}
+                      <code class="resp">
+                        {{ path_info.responses.200 }}
+                      </code>
+                    {% endfor %}
+                    {% for path_type,path_info in paths_info.items %}
+                      <code class="resp" style="display: none;">
+                        {{ path_info.response.400 }}
+                      </code>
+                    {% endfor %}
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% endblock %}

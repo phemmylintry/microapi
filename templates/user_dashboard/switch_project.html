@@ -1,0 +1,72 @@
+{% extends 'user_dashboard/dash_base.html' %}
+
+{% block content %}
+{% load static %}
+
+<div id="settings">
+
+  <div>
+    <div class="main__title">
+      <h1>Account Settings</h1>
+      <p>Set your preference, help us personalize your experience and make account changes here</p>
+    </div>
+
+    <div class="main__content__heading">
+      <div></div>
+
+      <div>
+        <h4>Profile</h4>
+      </div>
+    </div>
+
+    <div class="main__content">
+      <div class="main__content__menu">
+        <ul>
+          <li class="active"><b>Profile</b></li>
+          <li><b>Password</b></li>
+          <li><b>Projects</b></li>
+        </ul>
+      </div>
+
+      <section class="main__content__tabs">
+        
+        <article id="profile-tab">
+          <div class="profile__details">
+            <div class="profile__image">
+              <i class="far fa-user"></i>
+            </div>
+  
+            <div class="btn-container">
+              <button class="primary-btn custom-btn">Upload New Image</button>
+  
+              <p>Remove</p>
+            </div>
+          </div>
+
+          <div class="edit__profile__form">
+            <form>
+
+              <label>
+                <b>Username</b>
+                <input type="text" placeholder="Kadet">
+              </label>
+
+              <label>
+                <b>Email</b>
+                <input type="text" placeholder="techkadet@gmail.com">
+              </label>
+
+              <button class="primary-btn custom-btn">Save Changes</button>
+
+            </form>
+          </div>
+        </article>
+        
+      </section>
+    </div>
+
+  </div>
+
+</div>
+
+{% endblock %}

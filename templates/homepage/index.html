@@ -1,0 +1,180 @@
+{% extends 'homepage/base.html' %}
+
+{% block content %}
+{% load static %}
+  <body id="home">
+    
+    <main>
+      <section>
+          <div class="container-fluid">
+              <div class="row item-one ">
+                <div class="col-md-12 text-center">
+                  <h1 class="item-one__header">Open Source APIs for</h1>
+                  <h1 class="item-one__header">Individuals and Enterprises </h1>
+                  <p class="item-one__text">MicroAPi is a library of microservice APIs, built and organized <br>for your software team to get that project running.</p>
+                </div>
+              </div>
+              <div class="row dashboard">
+                <div class="col-md-12 text-center dashboard__container">
+                  <img class="dashboard__container__img" src="{% static 'img/Group 645.png' %}" alt="placeholder">
+                </div>
+              </div>
+              <div class="row item-two mt-5">
+                <div class="col-md-12 text-center">
+                  <h1 class="item-one__header">The best open source micro service</h1>
+                  <p class="item-four__description item-one__text" >We make it easy for you or your co-operation to build and organize your<br> database seemlessly at speeds you could only dream about </p>
+                </div>
+              </div>
+              <div class="my-4 item-three text-center">
+                <h5>Why MicroAPI ?</h5>
+              </div>
+              <div class="container">
+                <div class="row mt-3 item-four">
+                  <div class="col-md-3 item-four__content">
+                    <h6 class="item-four__header text-center">No-Code Tool</h6>
+                    <p class="item-four__description">Build amazing apps faster. Our API saves you months of integration testing and support headache for you and your customers. </p>
+                  </div>
+                  <div class="col-md-3 item-four__content"> 
+                    <h6 class="item-four__header text-center">Fast Implementation</h6>
+                    <p class="item-four__description">Build amazing apps faster. Our API saves you months of integration testing and support headache for you and your customers. </p>
+                  </div>
+                  <div class="col-md-3 item-four__content"> 
+                    <h6 class="item-four__header text-center">Easy to use</h6>
+                    <p class="item-four__description">Build amazing apps faster. Our API saves you months of integration testing and support headache for you and your customers. </p>
+                  </div>
+                </div>
+            </div>
+            
+            <div class="container-fluid item-five">
+              <div class="row ">
+                <div class="col-md-12 mb-5"> 
+                  <div class="container heading">
+                    <h2 class="item-one__header">Dashboard that works</h2>
+                  <p class="item-one__text"> MicroAPI provides you with a dashboard that is simple and easy to navigate, allowing you drag 
+                    and drop your APIs at ease. It is designed to help you 
+                    curate your website, work on them and publish as you please.</p>
+                  </div>
+                    <div class="item-five__container">
+                    <img class="img-fluid item-five__image-container__img" src="{% static 'img/Group 596.png' %}" alt="placeholder">  
+                  </div>
+                </div>      
+              </div>
+            </div>
+
+            <div class="container">
+              <div class="row">
+                <div class="col-md-12 mt-5 mb-3 item-ten"> 
+                  <h5 class="text-center item-ten__text">Integrates well with your git provider</h5>
+                </div>
+                <div class=" item-six">
+                  <a href="#"><i class="fab fa-github fa-3x py-3 item-six__icon"></i></a>
+                  <a href="#"><i class="fab fa-gitlab fa-3x  py-3 item-six__icon"></i></a>
+                  <a href="#"><i class="fab fa-bitbucket fa-3x  py-3 item-six__icon"></i></a>
+                </div> 
+              </div>
+              <!-- <div class="row"> -->
+                    
+              
+            </div>
+
+
+            <div class="container-fluid item-seven">
+              <div class="row  ">
+                <div class="col-md-12 mb-5"> 
+                  <div class="container heading">
+                    <h2 class="item-one__header">Dashboard that works</h2>
+                    <p class="item-one__text"> MicroAPI provides you with a dashboard that is simple and easy to navigate, allowing you drag 
+                      and drop your APIs at ease. It is designed to help you 
+                      curate your website, work on them and publish as you please.</p>
+                  </div>
+                    <div class="item-seven__container">
+                      <img class="img-fluid item-five__image-container__img" src="{% static 'img/Group 623.png' %}" alt="placeholder">
+                    </div>
+                  </div>
+                </div>      
+              </div>
+
+
+              <div class="item-ten__other">
+                <div class="col-md-12 my-5 item-ten"> 
+                  <h5 class="text-center item-ten__text">Seamless integration with your favorite frameworks</h5>
+                </div>
+                <div class="item-ten__image-container">
+                <div>
+                  <img class="img-fluid  item-ten__image-container__img" src="{% static 'img/react-icon.png' %}">
+                </div>
+                <div>
+                 <img class="img-fluid  item-ten__image-container__img" src="{% static 'img/ember-icon.png' %}">
+                </div>
+                <div>
+                 <img class="img-fluid  item-ten__image-container__img" src="{% static 'img/angular-icon.png' %}">
+                </div>
+                <div>
+                  <!-- <img class="img-fluid  item-ten__image-container__img" src="{% static 'img/gatsby-icon.png' %}"> -->
+                </div>
+              </div>
+            </div>
+
+            <div class="container-fluid mt-5 item-eight">
+              <div class="container">
+                <div class="row py-5">
+                  <div class="col-md-12 text-center">
+                    <h1 class="item-one__header">Available APIs</h1>
+                    <p  class="item-one__text">Here’s a list of APIs that we currently have for you, we’ll be adding more in subsequent times</p>
+                  </div>
+                </div>
+              </div>
+            </div> 
+            <div class="container-fluid">
+              <div class="text-danger text-center">
+                  {% for message in messages %}
+                    {{ message }}
+                  {% endfor %}
+              </div>
+              <div class="container item-nine">
+                {% if all_apis %}
+                  {% for api in all_apis %}
+                    <div class="col-md-6 item-nine__content">
+                      <div class="item-nine__item mb-5">
+                        <h2 class="item-one__header">{{ api.title }}</h2>
+                        <p class="item-one__text">{{ api.description }}</p>
+                        <a href="{% url 'docs' api.slug %}" class="item-nine__item__link item-one__text">View Documentation</a>
+                      </div>
+                    </div>
+                  {% endfor %}
+                {% else %}
+                  <div class="container">
+                    <div class="row py-5">
+                      <div class="col-md-12 text-center">
+                        <h1 class="item-one__header">No Available APIs at the moment!</h1>
+                        <h1 class="item-one__header">COMING SOON!</h1>
+                      </div>
+                    </div>
+                  </div>
+                {% endif %}
+              </div>
+            </div>
+        
+            <div class="container-fluid mt-5 item-eleven">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-12 mb-5 text-center">
+                    <h1 class="mb-5 item-one__header">Make your work seamless</h1>
+                    <input type="text" placeholder="Enter Your email">
+                    <button href="#" class="started_btn">Get Started</button>
+                    <!-- <a href="#" class="item-nine__button">Get Started</a> -->
+                  </div>
+                  <form>
+              
+         
+
+                </div>
+              </div>
+            </div> 
+
+            
+          </div>
+      </section>
+    </main>
+  </body>
+{% endblock %}

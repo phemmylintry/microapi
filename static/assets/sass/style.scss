@@ -1,0 +1,28 @@
+//import partials
+@import 'config';
+@import 'utilities';
+@import 'layout';
+@import 'pages/index';
+@import 'pages/about';
+@import 'pages/contact';
+@import 'pages/api-endpoints';
+@import 'pages/faq';
+@import 'pages/blogs';
+// @import 'pages/index';
+@import 'pages/blog_search';
+@import 'pages/signup';
+@import 'pages/recoverpassword';
+@import 'pages/hire_consultant';
+@import 'pages/setup-comment-api';
+@import 'pages/blog_post';
+@import 'pages/doclayout';
+@import 'pages/auth';
+@import 'dashboard/index';
+@import 'dashboard/settings';
+@import 'pages/configure-blog-api';
+@import 'pages/api_getstarted';
+@import 'pages/api-reference';
+@import 'pages/api-tutorial';
+
+//Individual Documentation 
+@import 'pages/documentation';

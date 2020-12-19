@@ -1,0 +1,72 @@
+//set custom fonts
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+@font-face {
+  font-family: 'gilroybold';
+  src: url('../fonts/gilroy-bold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'gilroylight';
+  src: url('../fonts/gilroy-light.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'gilroyregular';
+  src: url('../fonts/gilroy-regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'gilroysemibold';
+  src: url('../fonts/gilroy-semibold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'gilroymedium';
+  src: url('../fonts/gilroy-medium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+//initialise bold font for headings
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: "gilroybold";
+}
+
+
+//set default font 
+$default-font: 'gilroyregular';
+
+* {
+  font-family: $default-font;
+  overflow: visible;
+}
+
+body {
+  margin: 0;
+  padding: 0em;
+}
+
+
+//theme colors
+
+$primary-color: #1A1B2D;
+$secondary-color: #fff;
+$tetiary-color: #f4f4f4;
+$theme-color: #58BF8E;
+
+//media breakpoints 
+
+$breakpoint-tablet: 993px;
+$breakpoint-phone: 576px;

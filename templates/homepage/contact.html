@@ -1,0 +1,62 @@
+{% extends 'homepage/base.html'%}
+
+{% block content %}
+{% load static %}
+
+<body id="contact">
+
+  <!-- Main body goes here -->
+
+  <div class="contact container-fluid">
+    <div class="contact__header col text-center">
+      <h1>
+        Contact Us
+      </h1>
+    </div>
+    <div class="contact__intro col col-12 col-md-8 col-lg-4">
+      <p>
+        We’d love to hear from you! Let us know what you think–feel free to chat with us, tweet at us, or get in
+        touch
+        with
+        support.
+      </p>
+    </div>
+    <div
+      class="contact__main row col-lg-7 col-xl-6 mx-auto d-flex flex-column-reverse flex-md-row justify-content-around align-items-start">
+      <div class="contact__details col-12 mt-5 mt-md-0 col-md-5 col-lg-6 px-0">
+        <h4>
+          We'd love to hear from you
+        </h4>
+        <div class="details mb-3">
+          <span class="fa fa-map-marker-alt mr-3"></span>
+          <span>HNG Road, 315 Work Avenue</span>
+        </div>
+        <div class="details mb-3">
+          <span class="fa fa-phone mr-3"></span>
+          <span>
+            <a class="detail__link" href="tel:+2348102557945">(0)-810-255-7945</a>
+          </span>
+        </div>
+        <div class="details mb-3">
+          <span class="fa fa-envelope mr-3"></span>
+          <span>
+            <a class="detail__link" href="mailto:microapi@sample.com">microapi@sample.com</a>
+          </span>
+        </div>
+      </div>
+      <div class="contact__form col-12 col-md-6 px-0">
+        <form method="POST" action="#">
+          {% csrf_token %}
+          <input type="text" name="name" value="" id="name" placeholder="Name" class="form__element">
+          <input type="email" name="email" value="" id="mail" placeholder="Email" class="form__element">
+          <textarea name="message" value="message" id="message" rows="10" placeholder="Write something..."
+            class="w-100 form__element"></textarea>
+          <button type="submit" name="submit" value="OK" class="primary-btn form__element">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+{% endblock %}
+
+</html>
