@@ -27,7 +27,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '=%%#64qx4@3(a-&y1g%heza3_5id!o_@qggzo$$(0@q4a61$cn'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 
 ALLOWED_HOSTS = ['*']
@@ -102,7 +102,7 @@ LOGIN_URL = '/accounts/signin'
 LOGOUT_REDIRECT_URL = ''
 LOGIN_REDIRECT_URL = '/'
 
-SITE_ID = 3
+SITE_ID = 4
 
 AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',
@@ -162,7 +162,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'microapi',
         'HOST': 'localhost',
-        'PASSWORD': '_@Thyfemi(1)',
+        'PASSWORD': 'Faithmygf@1',
         'PORT': '3306',
         'USER': 'root'
     }

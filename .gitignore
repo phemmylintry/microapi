@@ -143,3 +143,4 @@ mysql/
 local.py
 # **/migrations/*
 .env
+/dashboard
