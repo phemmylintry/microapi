@@ -35,6 +35,7 @@
               name="firstname"
               class="form-control"
               placeholder="Enter your first name..."
+              required
             />
           </div>
           <div class="form-group">
@@ -44,6 +45,7 @@
               name="lastname"
               class="form-control"
               placeholder="Enter your Last name..."
+              required
             />
           </div>
           <div class="form-group">
@@ -53,7 +55,7 @@
               name="username"
               class="form-control"
               placeholder="Enter your Username.."
-
+              required
             />
           </div>
 
@@ -64,17 +66,19 @@
               name="email"
               class="form-control"
               placeholder="Enter your email address..."
+              required
             />
           </div>
         
           <div class="form-group">
             <label for="pwd">PASSWORD</label>
-            <input type="password" name="pwd" class="form-control" />
+            <input type="password" name="pwd" class="form-control" id="pwd" required/>
           </div>
 
           <div class="form-group">
             <label for="pwd">CONFIRM PASSWORD</label>
-            <input type="password" name="confirmpwd" class="form-control" />
+            <input type="password" name="confirmpwd" id="confirmpwd" class="form-control" required/>
+            <span id='message'></span>
           </div>
      
           <button type="submit" class="btn btn-block primary-btn">

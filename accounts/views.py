@@ -79,12 +79,22 @@ def signup(request):
                     
                 except User.DoesNotExist:
                     user = User.objects.create_user(email, username=username, first_name=first_name, last_name=last_name, password=password)
-                    project = Project.objects.create(name='Default Project', user = user, token = uuid.uuid4().hex, last_project=True)
-                    project.save()
+                    name = user.last_project
+                    print(name)
+                    if name:
+                        project = Project.objects.filter(
+                            user=user).get(last_project=True)
+                    else:
+                        project = Project.objects.create(
+                            name="Default Project", user=user, token=uuid.uuid4().hex, last_project=True)
+                        project.save()
                     user.last_project = project.name
                     user.save()
-                    auth.login(request, user)
+                    auth.login(request, user, backend='django.contrib.auth.backends.ModelBackend')
                     return redirect('accounts:signin')
+            elif password == "":
+                messages.error(request, 'Password field must be filled')
+                return redirect('accounts:signup')
             else:
                 messages.error(request, 'Password must match')
                 return redirect('accounts:signup')

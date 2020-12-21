@@ -57,8 +57,11 @@ def default_project(sender, **kwargs):
         extra_data = user.socialaccount_set.get(provider='google').extra_data
     except ObjectDoesNotExist:
         pass
-    else:
-        project = Project.objects.create(name='Default Project', user = user, token = uuid.uuid4().hex, last_project=True)
-        project.save()
-        user.last_project = project.name
+    name = user.last_project
+    if name:
+        try:
+            project = Project.objects.filter(user=user).get(last_project=True)
+        except ObjectDoesNotExist:
+            project = Project.objects.create(name='Default Project', user = user, token = uuid.uuid4().hex, last_project=True)
+            project.save()
         user.save()
