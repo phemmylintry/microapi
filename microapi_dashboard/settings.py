@@ -162,7 +162,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'microapi',
         'HOST': 'localhost',
-        'PASSWORD': 'Faithmygf@1',
+        'PASSWORD': 'password',
         'PORT': '3306',
         'USER': 'root'
     }
