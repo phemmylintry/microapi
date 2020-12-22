@@ -102,7 +102,7 @@ LOGIN_URL = '/accounts/signin'
 LOGOUT_REDIRECT_URL = ''
 LOGIN_REDIRECT_URL = '/'
 
-SITE_ID = 3
+SITE_ID = 4
 
 AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',
