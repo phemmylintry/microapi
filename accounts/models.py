@@ -58,7 +58,8 @@ def default_project(sender, **kwargs):
     except ObjectDoesNotExist:
         pass
     name = user.last_project
-    if name:
+    print(name)
+    if name is None:
         try:
             project = Project.objects.filter(user=user).get(last_project=True)
         except ObjectDoesNotExist:
